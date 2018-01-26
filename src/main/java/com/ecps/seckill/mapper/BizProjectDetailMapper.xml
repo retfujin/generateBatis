@@ -1,0 +1,2996 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecps.seckill.mapper.BizProjectDetailMapper">
+  <resultMap id="BaseResultMap" type="com.ecps.seckill.pojo.BizProjectDetail">
+    <id column="project_id" jdbcType="VARCHAR" property="projectId" />
+    <result column="id" jdbcType="VARCHAR" property="id" />
+    <result column="former_name" jdbcType="VARCHAR" property="formerName" />
+    <result column="certificate_number" jdbcType="VARCHAR" property="certificateNumber" />
+    <result column="gender" jdbcType="CHAR" property="gender" />
+    <result column="birthday" jdbcType="TIMESTAMP" property="birthday" />
+    <result column="marital_status" jdbcType="CHAR" property="maritalStatus" />
+    <result column="has_children" jdbcType="CHAR" property="hasChildren" />
+    <result column="mobile_phone_number" jdbcType="VARCHAR" property="mobilePhoneNumber" />
+    <result column="census_register_seat_detail" jdbcType="VARCHAR" property="censusRegisterSeatDetail" />
+    <result column="census_register_seat_counties" jdbcType="VARCHAR" property="censusRegisterSeatCounties" />
+    <result column="census_register_type" jdbcType="VARCHAR" property="censusRegisterType" />
+    <result column="ftelephone" jdbcType="VARCHAR" property="ftelephone" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="other_contact_information" jdbcType="VARCHAR" property="otherContactInformation" />
+    <result column="other_contact_information_value" jdbcType="VARCHAR" property="otherContactInformationValue" />
+    <result column="currently_checkin_time" jdbcType="TIMESTAMP" property="currentlyCheckinTime" />
+    <result column="correspondence_counties" jdbcType="VARCHAR" property="correspondenceCounties" />
+    <result column="correspondence_detail_address" jdbcType="VARCHAR" property="correspondenceDetailAddress" />
+    <result column="communications_code" jdbcType="VARCHAR" property="communicationsCode" />
+    <result column="work_units" jdbcType="VARCHAR" property="workUnits" />
+    <result column="unit_type" jdbcType="CHAR" property="unitType" />
+    <result column="professional_types" jdbcType="CHAR" property="professionalTypes" />
+    <result column="unit_counties" jdbcType="VARCHAR" property="unitCounties" />
+    <result column="unit_address" jdbcType="VARCHAR" property="unitAddress" />
+    <result column="unit_phone" jdbcType="VARCHAR" property="unitPhone" />
+    <result column="in_time" jdbcType="TIMESTAMP" property="inTime" />
+    <result column="position" jdbcType="VARCHAR" property="position" />
+    <result column="work_title" jdbcType="VARCHAR" property="workTitle" />
+    <result column="highest_record_formal" jdbcType="VARCHAR" property="highestRecordFormal" />
+    <result column="education" jdbcType="VARCHAR" property="education" />
+    <result column="certificate" jdbcType="VARCHAR" property="certificate" />
+    <result column="now_housing_area" jdbcType="VARCHAR" property="nowHousingArea" />
+    <result column="housing_type" jdbcType="VARCHAR" property="housingType" />
+    <result column="has_car" jdbcType="VARCHAR" property="hasCar" />
+    <result column="vehicle_flatcard" jdbcType="VARCHAR" property="vehicleFlatcard" />
+    <result column="personal_monthly_income" jdbcType="DECIMAL" property="personalMonthlyIncome" />
+    <result column="personal_income" jdbcType="DECIMAL" property="personalIncome" />
+    <result column="natural_person_type" jdbcType="VARCHAR" property="naturalPersonType" />
+    <result column="client_area_type" jdbcType="VARCHAR" property="clientAreaType" />
+    <result column="group_staff" jdbcType="VARCHAR" property="groupStaff" />
+    <result column="comprehensive_impression" jdbcType="VARCHAR" property="comprehensiveImpression" />
+    <result column="customer_source" jdbcType="VARCHAR" property="customerSource" />
+    <result column="added" jdbcType="VARCHAR" property="added" />
+    <result column="family_assets" jdbcType="DECIMAL" property="familyAssets" />
+    <result column="month_liabilities" jdbcType="DECIMAL" property="monthLiabilities" />
+    <result column="total_liabilities" jdbcType="DECIMAL" property="totalLiabilities" />
+    <result column="census_register_seat" jdbcType="VARCHAR" property="censusRegisterSeat" />
+    <result column="merchant_name" jdbcType="VARCHAR" property="merchantName" />
+    <result column="business_scope" jdbcType="VARCHAR" property="businessScope" />
+    <result column="business_operator" jdbcType="VARCHAR" property="businessOperator" />
+    <result column="stockholder_num" jdbcType="INTEGER" property="stockholderNum" />
+    <result column="operate_addr" jdbcType="VARCHAR" property="operateAddr" />
+    <result column="employee_num" jdbcType="INTEGER" property="employeeNum" />
+    <result column="organize_style" jdbcType="VARCHAR" property="organizeStyle" />
+    <result column="operate_start_time" jdbcType="TIMESTAMP" property="operateStartTime" />
+    <result column="business_production" jdbcType="VARCHAR" property="businessProduction" />
+    <result column="area" jdbcType="VARCHAR" property="area" />
+    <result column="detail_desc" jdbcType="VARCHAR" property="detailDesc" />
+    <result column="monthly_sales" jdbcType="VARCHAR" property="monthlySales" />
+    <result column="gross_profit_margin_rate" jdbcType="DECIMAL" property="grossProfitMarginRate" />
+    <result column="net_income_rate" jdbcType="DECIMAL" property="netIncomeRate" />
+    <result column="family_monthly_expenses" jdbcType="DECIMAL" property="familyMonthlyExpenses" />
+    <result column="current_inventory" jdbcType="DECIMAL" property="currentInventory" />
+    <result column="accounts_receivable" jdbcType="DECIMAL" property="accountsReceivable" />
+    <result column="accounts_payable" jdbcType="DECIMAL" property="accountsPayable" />
+    <result column="other_revenue" jdbcType="VARCHAR" property="otherRevenue" />
+    <result column="nation" jdbcType="VARCHAR" property="nation" />
+    <result column="work_time" jdbcType="VARCHAR" property="workTime" />
+    <result column="contacts1" jdbcType="VARCHAR" property="contacts1" />
+    <result column="contacts2" jdbcType="VARCHAR" property="contacts2" />
+    <result column="contacts3" jdbcType="VARCHAR" property="contacts3" />
+    <result column="contacts_tel1" jdbcType="VARCHAR" property="contactsTel1" />
+    <result column="contacts_tel2" jdbcType="VARCHAR" property="contactsTel2" />
+    <result column="contacts_tel3" jdbcType="VARCHAR" property="contactsTel3" />
+    <result column="contacts_relation1" jdbcType="VARCHAR" property="contactsRelation1" />
+    <result column="contacts_relation2" jdbcType="VARCHAR" property="contactsRelation2" />
+    <result column="contacts_relation3" jdbcType="VARCHAR" property="contactsRelation3" />
+    <result column="loan_use" jdbcType="VARCHAR" property="loanUse" />
+    <result column="annex1" jdbcType="VARCHAR" property="annex1" />
+    <result column="annex2" jdbcType="VARCHAR" property="annex2" />
+    <result column="annex3" jdbcType="VARCHAR" property="annex3" />
+    <result column="annex4" jdbcType="VARCHAR" property="annex4" />
+    <result column="annex5" jdbcType="VARCHAR" property="annex5" />
+    <result column="annex6" jdbcType="VARCHAR" property="annex6" />
+    <result column="annex7" jdbcType="VARCHAR" property="annex7" />
+    <result column="annex8" jdbcType="VARCHAR" property="annex8" />
+    <result column="annex9" jdbcType="VARCHAR" property="annex9" />
+    <result column="annex10" jdbcType="VARCHAR" property="annex10" />
+    <result column="del_flag" jdbcType="VARCHAR" property="delFlag" />
+    <result column="yj_age_limit" jdbcType="VARCHAR" property="yjAgeLimit" />
+    <result column="relation_adress" jdbcType="VARCHAR" property="relationAdress" />
+    <result column="house_num" jdbcType="INTEGER" property="houseNum" />
+    <result column="car_num" jdbcType="INTEGER" property="carNum" />
+    <result column="bank_loan_amount" jdbcType="VARCHAR" property="bankLoanAmount" />
+    <result column="other_liabilities_account" jdbcType="VARCHAR" property="otherLiabilitiesAccount" />
+    <result column="customer_name" jdbcType="VARCHAR" property="customerName" />
+    <result column="customer_number" jdbcType="VARCHAR" property="customerNumber" />
+    <result column="referred" jdbcType="VARCHAR" property="referred" />
+    <result column="enterprise_type" jdbcType="CHAR" property="enterpriseType" />
+    <result column="currency" jdbcType="VARCHAR" property="currency" />
+    <result column="legal_representative" jdbcType="VARCHAR" property="legalRepresentative" />
+    <result column="legal_person_certificat_number" jdbcType="VARCHAR" property="legalPersonCertificatNumber" />
+    <result column="legal_person_position" jdbcType="VARCHAR" property="legalPersonPosition" />
+    <result column="registration_time" jdbcType="TIMESTAMP" property="registrationTime" />
+    <result column="registered_capital" jdbcType="DECIMAL" property="registeredCapital" />
+    <result column="actually_realized_capital" jdbcType="DECIMAL" property="actuallyRealizedCapital" />
+    <result column="certificate_type" jdbcType="CHAR" property="certificateType" />
+    <result column="business_license_effective_start_date" jdbcType="TIMESTAMP" property="businessLicenseEffectiveStartDate" />
+    <result column="business_license_effective_end_date" jdbcType="TIMESTAMP" property="businessLicenseEffectiveEndDate" />
+    <result column="latest_annual_inspection" jdbcType="TIMESTAMP" property="latestAnnualInspection" />
+    <result column="business_period" jdbcType="TIMESTAMP" property="businessPeriod" />
+    <result column="business_period_end" jdbcType="VARCHAR" property="businessPeriodEnd" />
+    <result column="companies_number" jdbcType="INTEGER" property="companiesNumber" />
+    <result column="credit_card_number" jdbcType="VARCHAR" property="creditCardNumber" />
+    <result column="tissue_types" jdbcType="VARCHAR" property="tissueTypes" />
+    <result column="subordinate_industry" jdbcType="VARCHAR" property="subordinateIndustry" />
+    <result column="belongsto_provinces_cities" jdbcType="VARCHAR" property="belongstoProvincesCities" />
+    <result column="actual_controllers" jdbcType="VARCHAR" property="actualControllers" />
+    <result column="phone_number" jdbcType="VARCHAR" property="phoneNumber" />
+    <result column="fax_number" jdbcType="VARCHAR" property="faxNumber" />
+    <result column="contact" jdbcType="VARCHAR" property="contact" />
+    <result column="contact_phone_number" jdbcType="VARCHAR" property="contactPhoneNumber" />
+    <result column="registered_address_cities" jdbcType="VARCHAR" property="registeredAddressCities" />
+    <result column="registered_zip_code" jdbcType="VARCHAR" property="registeredZipCode" />
+    <result column="main_business_scope" jdbcType="VARCHAR" property="mainBusinessScope" />
+    <result column="business_address_counties" jdbcType="VARCHAR" property="businessAddressCounties" />
+    <result column="local_zip_code" jdbcType="VARCHAR" property="localZipCode" />
+    <result column="organization_code" jdbcType="VARCHAR" property="organizationCode" />
+    <result column="business_license_number" jdbcType="VARCHAR" property="businessLicenseNumber" />
+    <result column="spouse_birthday" jdbcType="TIMESTAMP" property="spouseBirthday" />
+    <result column="spouse_name" jdbcType="VARCHAR" property="spouseName" />
+    <result column="spouse_gender" jdbcType="CHAR" property="spouseGender" />
+    <result column="spouse_document_type" jdbcType="CHAR" property="spouseDocumentType" />
+    <result column="spouse_id_number" jdbcType="VARCHAR" property="spouseIdNumber" />
+    <result column="spouse_mobile_phone" jdbcType="VARCHAR" property="spouseMobilePhone" />
+    <result column="spouse_unit_code" jdbcType="VARCHAR" property="spouseUnitCode" />
+    <result column="last_year_net_profit" jdbcType="DECIMAL" property="lastYearNetProfit" />
+    <result column="last_year_total_assets" jdbcType="DECIMAL" property="lastYearTotalAssets" />
+    <result column="last_year_net_worth" jdbcType="DECIMAL" property="lastYearNetWorth" />
+    <result column="last_year_total_liabilities" jdbcType="DECIMAL" property="lastYearTotalLiabilities" />
+    <result column="enterprise_monthly_debt" jdbcType="DECIMAL" property="enterpriseMonthlyDebt" />
+    <result column="recent_total_liabilities" jdbcType="DECIMAL" property="recentTotalLiabilities" />
+    <result column="recent_bank_loan_balance" jdbcType="DECIMAL" property="recentBankLoanBalance" />
+    <result column="recent_total_assets" jdbcType="DECIMAL" property="recentTotalAssets" />
+    <result column="recent_guarantee_assets" jdbcType="DECIMAL" property="recentGuaranteeAssets" />
+    <result column="recent_economic_litigation_costs" jdbcType="DECIMAL" property="recentEconomicLitigationCosts" />
+    <result column="recent_not_bank_loan_balance" jdbcType="DECIMAL" property="recentNotBankLoanBalance" />
+    <result column="current_year_total_profits" jdbcType="DECIMAL" property="currentYearTotalProfits" />
+    <result column="current_year_total_income" jdbcType="DECIMAL" property="currentYearTotalIncome" />
+    <result column="enterprise_overview1" jdbcType="VARCHAR" property="enterpriseOverview1" />
+    <result column="enterprise_overview2" jdbcType="VARCHAR" property="enterpriseOverview2" />
+    <result column="customer_size" jdbcType="VARCHAR" property="customerSize" />
+    <result column="small_business_logo" jdbcType="VARCHAR" property="smallBusinessLogo" />
+    <result column="group_clients_logo" jdbcType="VARCHAR" property="groupClientsLogo" />
+    <result column="customer_manager" jdbcType="VARCHAR" property="customerManager" />
+    <result column="input_user" jdbcType="VARCHAR" property="inputUser" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.ecps.seckill.pojo.BizProjectDetail">
+    <result column="picture" jdbcType="LONGVARCHAR" property="picture" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    project_id, id, former_name, certificate_number, gender, birthday, marital_status, 
+    has_children, mobile_phone_number, census_register_seat_detail, census_register_seat_counties, 
+    census_register_type, ftelephone, email, other_contact_information, other_contact_information_value, 
+    currently_checkin_time, correspondence_counties, correspondence_detail_address, communications_code, 
+    work_units, unit_type, professional_types, unit_counties, unit_address, unit_phone, 
+    in_time, position, work_title, highest_record_formal, education, certificate, now_housing_area, 
+    housing_type, has_car, vehicle_flatcard, personal_monthly_income, personal_income, 
+    natural_person_type, client_area_type, group_staff, comprehensive_impression, customer_source, 
+    added, family_assets, month_liabilities, total_liabilities, census_register_seat, 
+    merchant_name, business_scope, business_operator, stockholder_num, operate_addr, 
+    employee_num, organize_style, operate_start_time, business_production, area, detail_desc, 
+    monthly_sales, gross_profit_margin_rate, net_income_rate, family_monthly_expenses, 
+    current_inventory, accounts_receivable, accounts_payable, other_revenue, nation, 
+    work_time, contacts1, contacts2, contacts3, contacts_tel1, contacts_tel2, contacts_tel3, 
+    contacts_relation1, contacts_relation2, contacts_relation3, loan_use, annex1, annex2, 
+    annex3, annex4, annex5, annex6, annex7, annex8, annex9, annex10, del_flag, yj_age_limit, 
+    relation_adress, house_num, car_num, bank_loan_amount, other_liabilities_account, 
+    customer_name, customer_number, referred, enterprise_type, currency, legal_representative, 
+    legal_person_certificat_number, legal_person_position, registration_time, registered_capital, 
+    actually_realized_capital, certificate_type, business_license_effective_start_date, 
+    business_license_effective_end_date, latest_annual_inspection, business_period, business_period_end, 
+    companies_number, credit_card_number, tissue_types, subordinate_industry, belongsto_provinces_cities, 
+    actual_controllers, phone_number, fax_number, contact, contact_phone_number, registered_address_cities, 
+    registered_zip_code, main_business_scope, business_address_counties, local_zip_code, 
+    organization_code, business_license_number, spouse_birthday, spouse_name, spouse_gender, 
+    spouse_document_type, spouse_id_number, spouse_mobile_phone, spouse_unit_code, last_year_net_profit, 
+    last_year_total_assets, last_year_net_worth, last_year_total_liabilities, enterprise_monthly_debt, 
+    recent_total_liabilities, recent_bank_loan_balance, recent_total_assets, recent_guarantee_assets, 
+    recent_economic_litigation_costs, recent_not_bank_loan_balance, current_year_total_profits, 
+    current_year_total_income, enterprise_overview1, enterprise_overview2, customer_size, 
+    small_business_logo, group_clients_logo, customer_manager, input_user
+  </sql>
+  <sql id="Blob_Column_List">
+    picture
+  </sql>
+  <select id="selectByExampleWithBLOBs" parameterType="com.ecps.seckill.pojo.BizProjectDetailExample" resultMap="ResultMapWithBLOBs">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from biz_project_detail
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" parameterType="com.ecps.seckill.pojo.BizProjectDetailExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from biz_project_detail
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from biz_project_detail
+    where project_id = #{projectId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from biz_project_detail
+    where project_id = #{projectId,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.ecps.seckill.pojo.BizProjectDetailExample">
+    delete from biz_project_detail
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.ecps.seckill.pojo.BizProjectDetail">
+    insert into biz_project_detail (project_id, id, former_name, 
+      certificate_number, gender, birthday, 
+      marital_status, has_children, mobile_phone_number, 
+      census_register_seat_detail, census_register_seat_counties, 
+      census_register_type, ftelephone, email, 
+      other_contact_information, other_contact_information_value, 
+      currently_checkin_time, correspondence_counties, 
+      correspondence_detail_address, communications_code, 
+      work_units, unit_type, professional_types, 
+      unit_counties, unit_address, unit_phone, 
+      in_time, position, work_title, 
+      highest_record_formal, education, certificate, 
+      now_housing_area, housing_type, has_car, 
+      vehicle_flatcard, personal_monthly_income, 
+      personal_income, natural_person_type, client_area_type, 
+      group_staff, comprehensive_impression, customer_source, 
+      added, family_assets, month_liabilities, 
+      total_liabilities, census_register_seat, merchant_name, 
+      business_scope, business_operator, stockholder_num, 
+      operate_addr, employee_num, organize_style, 
+      operate_start_time, business_production, 
+      area, detail_desc, monthly_sales, 
+      gross_profit_margin_rate, net_income_rate, family_monthly_expenses, 
+      current_inventory, accounts_receivable, accounts_payable, 
+      other_revenue, nation, work_time, 
+      contacts1, contacts2, contacts3, 
+      contacts_tel1, contacts_tel2, contacts_tel3, 
+      contacts_relation1, contacts_relation2, contacts_relation3, 
+      loan_use, annex1, annex2, 
+      annex3, annex4, annex5, 
+      annex6, annex7, annex8, 
+      annex9, annex10, del_flag, 
+      yj_age_limit, relation_adress, house_num, 
+      car_num, bank_loan_amount, other_liabilities_account, 
+      customer_name, customer_number, referred, 
+      enterprise_type, currency, legal_representative, 
+      legal_person_certificat_number, legal_person_position, 
+      registration_time, registered_capital, 
+      actually_realized_capital, certificate_type, 
+      business_license_effective_start_date, business_license_effective_end_date, 
+      latest_annual_inspection, business_period, 
+      business_period_end, companies_number, credit_card_number, 
+      tissue_types, subordinate_industry, belongsto_provinces_cities, 
+      actual_controllers, phone_number, fax_number, 
+      contact, contact_phone_number, registered_address_cities, 
+      registered_zip_code, main_business_scope, business_address_counties, 
+      local_zip_code, organization_code, business_license_number, 
+      spouse_birthday, spouse_name, spouse_gender, 
+      spouse_document_type, spouse_id_number, spouse_mobile_phone, 
+      spouse_unit_code, last_year_net_profit, last_year_total_assets, 
+      last_year_net_worth, last_year_total_liabilities, 
+      enterprise_monthly_debt, recent_total_liabilities, 
+      recent_bank_loan_balance, recent_total_assets, 
+      recent_guarantee_assets, recent_economic_litigation_costs, 
+      recent_not_bank_loan_balance, current_year_total_profits, 
+      current_year_total_income, enterprise_overview1, 
+      enterprise_overview2, customer_size, small_business_logo, 
+      group_clients_logo, customer_manager, input_user, 
+      picture)
+    values (#{projectId,jdbcType=VARCHAR}, #{id,jdbcType=VARCHAR}, #{formerName,jdbcType=VARCHAR}, 
+      #{certificateNumber,jdbcType=VARCHAR}, #{gender,jdbcType=CHAR}, #{birthday,jdbcType=TIMESTAMP}, 
+      #{maritalStatus,jdbcType=CHAR}, #{hasChildren,jdbcType=CHAR}, #{mobilePhoneNumber,jdbcType=VARCHAR}, 
+      #{censusRegisterSeatDetail,jdbcType=VARCHAR}, #{censusRegisterSeatCounties,jdbcType=VARCHAR}, 
+      #{censusRegisterType,jdbcType=VARCHAR}, #{ftelephone,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
+      #{otherContactInformation,jdbcType=VARCHAR}, #{otherContactInformationValue,jdbcType=VARCHAR}, 
+      #{currentlyCheckinTime,jdbcType=TIMESTAMP}, #{correspondenceCounties,jdbcType=VARCHAR}, 
+      #{correspondenceDetailAddress,jdbcType=VARCHAR}, #{communicationsCode,jdbcType=VARCHAR}, 
+      #{workUnits,jdbcType=VARCHAR}, #{unitType,jdbcType=CHAR}, #{professionalTypes,jdbcType=CHAR}, 
+      #{unitCounties,jdbcType=VARCHAR}, #{unitAddress,jdbcType=VARCHAR}, #{unitPhone,jdbcType=VARCHAR}, 
+      #{inTime,jdbcType=TIMESTAMP}, #{position,jdbcType=VARCHAR}, #{workTitle,jdbcType=VARCHAR}, 
+      #{highestRecordFormal,jdbcType=VARCHAR}, #{education,jdbcType=VARCHAR}, #{certificate,jdbcType=VARCHAR}, 
+      #{nowHousingArea,jdbcType=VARCHAR}, #{housingType,jdbcType=VARCHAR}, #{hasCar,jdbcType=VARCHAR}, 
+      #{vehicleFlatcard,jdbcType=VARCHAR}, #{personalMonthlyIncome,jdbcType=DECIMAL}, 
+      #{personalIncome,jdbcType=DECIMAL}, #{naturalPersonType,jdbcType=VARCHAR}, #{clientAreaType,jdbcType=VARCHAR}, 
+      #{groupStaff,jdbcType=VARCHAR}, #{comprehensiveImpression,jdbcType=VARCHAR}, #{customerSource,jdbcType=VARCHAR}, 
+      #{added,jdbcType=VARCHAR}, #{familyAssets,jdbcType=DECIMAL}, #{monthLiabilities,jdbcType=DECIMAL}, 
+      #{totalLiabilities,jdbcType=DECIMAL}, #{censusRegisterSeat,jdbcType=VARCHAR}, #{merchantName,jdbcType=VARCHAR}, 
+      #{businessScope,jdbcType=VARCHAR}, #{businessOperator,jdbcType=VARCHAR}, #{stockholderNum,jdbcType=INTEGER}, 
+      #{operateAddr,jdbcType=VARCHAR}, #{employeeNum,jdbcType=INTEGER}, #{organizeStyle,jdbcType=VARCHAR}, 
+      #{operateStartTime,jdbcType=TIMESTAMP}, #{businessProduction,jdbcType=VARCHAR}, 
+      #{area,jdbcType=VARCHAR}, #{detailDesc,jdbcType=VARCHAR}, #{monthlySales,jdbcType=VARCHAR}, 
+      #{grossProfitMarginRate,jdbcType=DECIMAL}, #{netIncomeRate,jdbcType=DECIMAL}, #{familyMonthlyExpenses,jdbcType=DECIMAL}, 
+      #{currentInventory,jdbcType=DECIMAL}, #{accountsReceivable,jdbcType=DECIMAL}, #{accountsPayable,jdbcType=DECIMAL}, 
+      #{otherRevenue,jdbcType=VARCHAR}, #{nation,jdbcType=VARCHAR}, #{workTime,jdbcType=VARCHAR}, 
+      #{contacts1,jdbcType=VARCHAR}, #{contacts2,jdbcType=VARCHAR}, #{contacts3,jdbcType=VARCHAR}, 
+      #{contactsTel1,jdbcType=VARCHAR}, #{contactsTel2,jdbcType=VARCHAR}, #{contactsTel3,jdbcType=VARCHAR}, 
+      #{contactsRelation1,jdbcType=VARCHAR}, #{contactsRelation2,jdbcType=VARCHAR}, #{contactsRelation3,jdbcType=VARCHAR}, 
+      #{loanUse,jdbcType=VARCHAR}, #{annex1,jdbcType=VARCHAR}, #{annex2,jdbcType=VARCHAR}, 
+      #{annex3,jdbcType=VARCHAR}, #{annex4,jdbcType=VARCHAR}, #{annex5,jdbcType=VARCHAR}, 
+      #{annex6,jdbcType=VARCHAR}, #{annex7,jdbcType=VARCHAR}, #{annex8,jdbcType=VARCHAR}, 
+      #{annex9,jdbcType=VARCHAR}, #{annex10,jdbcType=VARCHAR}, #{delFlag,jdbcType=VARCHAR}, 
+      #{yjAgeLimit,jdbcType=VARCHAR}, #{relationAdress,jdbcType=VARCHAR}, #{houseNum,jdbcType=INTEGER}, 
+      #{carNum,jdbcType=INTEGER}, #{bankLoanAmount,jdbcType=VARCHAR}, #{otherLiabilitiesAccount,jdbcType=VARCHAR}, 
+      #{customerName,jdbcType=VARCHAR}, #{customerNumber,jdbcType=VARCHAR}, #{referred,jdbcType=VARCHAR}, 
+      #{enterpriseType,jdbcType=CHAR}, #{currency,jdbcType=VARCHAR}, #{legalRepresentative,jdbcType=VARCHAR}, 
+      #{legalPersonCertificatNumber,jdbcType=VARCHAR}, #{legalPersonPosition,jdbcType=VARCHAR}, 
+      #{registrationTime,jdbcType=TIMESTAMP}, #{registeredCapital,jdbcType=DECIMAL}, 
+      #{actuallyRealizedCapital,jdbcType=DECIMAL}, #{certificateType,jdbcType=CHAR}, 
+      #{businessLicenseEffectiveStartDate,jdbcType=TIMESTAMP}, #{businessLicenseEffectiveEndDate,jdbcType=TIMESTAMP}, 
+      #{latestAnnualInspection,jdbcType=TIMESTAMP}, #{businessPeriod,jdbcType=TIMESTAMP}, 
+      #{businessPeriodEnd,jdbcType=VARCHAR}, #{companiesNumber,jdbcType=INTEGER}, #{creditCardNumber,jdbcType=VARCHAR}, 
+      #{tissueTypes,jdbcType=VARCHAR}, #{subordinateIndustry,jdbcType=VARCHAR}, #{belongstoProvincesCities,jdbcType=VARCHAR}, 
+      #{actualControllers,jdbcType=VARCHAR}, #{phoneNumber,jdbcType=VARCHAR}, #{faxNumber,jdbcType=VARCHAR}, 
+      #{contact,jdbcType=VARCHAR}, #{contactPhoneNumber,jdbcType=VARCHAR}, #{registeredAddressCities,jdbcType=VARCHAR}, 
+      #{registeredZipCode,jdbcType=VARCHAR}, #{mainBusinessScope,jdbcType=VARCHAR}, #{businessAddressCounties,jdbcType=VARCHAR}, 
+      #{localZipCode,jdbcType=VARCHAR}, #{organizationCode,jdbcType=VARCHAR}, #{businessLicenseNumber,jdbcType=VARCHAR}, 
+      #{spouseBirthday,jdbcType=TIMESTAMP}, #{spouseName,jdbcType=VARCHAR}, #{spouseGender,jdbcType=CHAR}, 
+      #{spouseDocumentType,jdbcType=CHAR}, #{spouseIdNumber,jdbcType=VARCHAR}, #{spouseMobilePhone,jdbcType=VARCHAR}, 
+      #{spouseUnitCode,jdbcType=VARCHAR}, #{lastYearNetProfit,jdbcType=DECIMAL}, #{lastYearTotalAssets,jdbcType=DECIMAL}, 
+      #{lastYearNetWorth,jdbcType=DECIMAL}, #{lastYearTotalLiabilities,jdbcType=DECIMAL}, 
+      #{enterpriseMonthlyDebt,jdbcType=DECIMAL}, #{recentTotalLiabilities,jdbcType=DECIMAL}, 
+      #{recentBankLoanBalance,jdbcType=DECIMAL}, #{recentTotalAssets,jdbcType=DECIMAL}, 
+      #{recentGuaranteeAssets,jdbcType=DECIMAL}, #{recentEconomicLitigationCosts,jdbcType=DECIMAL}, 
+      #{recentNotBankLoanBalance,jdbcType=DECIMAL}, #{currentYearTotalProfits,jdbcType=DECIMAL}, 
+      #{currentYearTotalIncome,jdbcType=DECIMAL}, #{enterpriseOverview1,jdbcType=VARCHAR}, 
+      #{enterpriseOverview2,jdbcType=VARCHAR}, #{customerSize,jdbcType=VARCHAR}, #{smallBusinessLogo,jdbcType=VARCHAR}, 
+      #{groupClientsLogo,jdbcType=VARCHAR}, #{customerManager,jdbcType=VARCHAR}, #{inputUser,jdbcType=VARCHAR}, 
+      #{picture,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ecps.seckill.pojo.BizProjectDetail">
+    insert into biz_project_detail
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="projectId != null">
+        project_id,
+      </if>
+      <if test="id != null">
+        id,
+      </if>
+      <if test="formerName != null">
+        former_name,
+      </if>
+      <if test="certificateNumber != null">
+        certificate_number,
+      </if>
+      <if test="gender != null">
+        gender,
+      </if>
+      <if test="birthday != null">
+        birthday,
+      </if>
+      <if test="maritalStatus != null">
+        marital_status,
+      </if>
+      <if test="hasChildren != null">
+        has_children,
+      </if>
+      <if test="mobilePhoneNumber != null">
+        mobile_phone_number,
+      </if>
+      <if test="censusRegisterSeatDetail != null">
+        census_register_seat_detail,
+      </if>
+      <if test="censusRegisterSeatCounties != null">
+        census_register_seat_counties,
+      </if>
+      <if test="censusRegisterType != null">
+        census_register_type,
+      </if>
+      <if test="ftelephone != null">
+        ftelephone,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+      <if test="otherContactInformation != null">
+        other_contact_information,
+      </if>
+      <if test="otherContactInformationValue != null">
+        other_contact_information_value,
+      </if>
+      <if test="currentlyCheckinTime != null">
+        currently_checkin_time,
+      </if>
+      <if test="correspondenceCounties != null">
+        correspondence_counties,
+      </if>
+      <if test="correspondenceDetailAddress != null">
+        correspondence_detail_address,
+      </if>
+      <if test="communicationsCode != null">
+        communications_code,
+      </if>
+      <if test="workUnits != null">
+        work_units,
+      </if>
+      <if test="unitType != null">
+        unit_type,
+      </if>
+      <if test="professionalTypes != null">
+        professional_types,
+      </if>
+      <if test="unitCounties != null">
+        unit_counties,
+      </if>
+      <if test="unitAddress != null">
+        unit_address,
+      </if>
+      <if test="unitPhone != null">
+        unit_phone,
+      </if>
+      <if test="inTime != null">
+        in_time,
+      </if>
+      <if test="position != null">
+        position,
+      </if>
+      <if test="workTitle != null">
+        work_title,
+      </if>
+      <if test="highestRecordFormal != null">
+        highest_record_formal,
+      </if>
+      <if test="education != null">
+        education,
+      </if>
+      <if test="certificate != null">
+        certificate,
+      </if>
+      <if test="nowHousingArea != null">
+        now_housing_area,
+      </if>
+      <if test="housingType != null">
+        housing_type,
+      </if>
+      <if test="hasCar != null">
+        has_car,
+      </if>
+      <if test="vehicleFlatcard != null">
+        vehicle_flatcard,
+      </if>
+      <if test="personalMonthlyIncome != null">
+        personal_monthly_income,
+      </if>
+      <if test="personalIncome != null">
+        personal_income,
+      </if>
+      <if test="naturalPersonType != null">
+        natural_person_type,
+      </if>
+      <if test="clientAreaType != null">
+        client_area_type,
+      </if>
+      <if test="groupStaff != null">
+        group_staff,
+      </if>
+      <if test="comprehensiveImpression != null">
+        comprehensive_impression,
+      </if>
+      <if test="customerSource != null">
+        customer_source,
+      </if>
+      <if test="added != null">
+        added,
+      </if>
+      <if test="familyAssets != null">
+        family_assets,
+      </if>
+      <if test="monthLiabilities != null">
+        month_liabilities,
+      </if>
+      <if test="totalLiabilities != null">
+        total_liabilities,
+      </if>
+      <if test="censusRegisterSeat != null">
+        census_register_seat,
+      </if>
+      <if test="merchantName != null">
+        merchant_name,
+      </if>
+      <if test="businessScope != null">
+        business_scope,
+      </if>
+      <if test="businessOperator != null">
+        business_operator,
+      </if>
+      <if test="stockholderNum != null">
+        stockholder_num,
+      </if>
+      <if test="operateAddr != null">
+        operate_addr,
+      </if>
+      <if test="employeeNum != null">
+        employee_num,
+      </if>
+      <if test="organizeStyle != null">
+        organize_style,
+      </if>
+      <if test="operateStartTime != null">
+        operate_start_time,
+      </if>
+      <if test="businessProduction != null">
+        business_production,
+      </if>
+      <if test="area != null">
+        area,
+      </if>
+      <if test="detailDesc != null">
+        detail_desc,
+      </if>
+      <if test="monthlySales != null">
+        monthly_sales,
+      </if>
+      <if test="grossProfitMarginRate != null">
+        gross_profit_margin_rate,
+      </if>
+      <if test="netIncomeRate != null">
+        net_income_rate,
+      </if>
+      <if test="familyMonthlyExpenses != null">
+        family_monthly_expenses,
+      </if>
+      <if test="currentInventory != null">
+        current_inventory,
+      </if>
+      <if test="accountsReceivable != null">
+        accounts_receivable,
+      </if>
+      <if test="accountsPayable != null">
+        accounts_payable,
+      </if>
+      <if test="otherRevenue != null">
+        other_revenue,
+      </if>
+      <if test="nation != null">
+        nation,
+      </if>
+      <if test="workTime != null">
+        work_time,
+      </if>
+      <if test="contacts1 != null">
+        contacts1,
+      </if>
+      <if test="contacts2 != null">
+        contacts2,
+      </if>
+      <if test="contacts3 != null">
+        contacts3,
+      </if>
+      <if test="contactsTel1 != null">
+        contacts_tel1,
+      </if>
+      <if test="contactsTel2 != null">
+        contacts_tel2,
+      </if>
+      <if test="contactsTel3 != null">
+        contacts_tel3,
+      </if>
+      <if test="contactsRelation1 != null">
+        contacts_relation1,
+      </if>
+      <if test="contactsRelation2 != null">
+        contacts_relation2,
+      </if>
+      <if test="contactsRelation3 != null">
+        contacts_relation3,
+      </if>
+      <if test="loanUse != null">
+        loan_use,
+      </if>
+      <if test="annex1 != null">
+        annex1,
+      </if>
+      <if test="annex2 != null">
+        annex2,
+      </if>
+      <if test="annex3 != null">
+        annex3,
+      </if>
+      <if test="annex4 != null">
+        annex4,
+      </if>
+      <if test="annex5 != null">
+        annex5,
+      </if>
+      <if test="annex6 != null">
+        annex6,
+      </if>
+      <if test="annex7 != null">
+        annex7,
+      </if>
+      <if test="annex8 != null">
+        annex8,
+      </if>
+      <if test="annex9 != null">
+        annex9,
+      </if>
+      <if test="annex10 != null">
+        annex10,
+      </if>
+      <if test="delFlag != null">
+        del_flag,
+      </if>
+      <if test="yjAgeLimit != null">
+        yj_age_limit,
+      </if>
+      <if test="relationAdress != null">
+        relation_adress,
+      </if>
+      <if test="houseNum != null">
+        house_num,
+      </if>
+      <if test="carNum != null">
+        car_num,
+      </if>
+      <if test="bankLoanAmount != null">
+        bank_loan_amount,
+      </if>
+      <if test="otherLiabilitiesAccount != null">
+        other_liabilities_account,
+      </if>
+      <if test="customerName != null">
+        customer_name,
+      </if>
+      <if test="customerNumber != null">
+        customer_number,
+      </if>
+      <if test="referred != null">
+        referred,
+      </if>
+      <if test="enterpriseType != null">
+        enterprise_type,
+      </if>
+      <if test="currency != null">
+        currency,
+      </if>
+      <if test="legalRepresentative != null">
+        legal_representative,
+      </if>
+      <if test="legalPersonCertificatNumber != null">
+        legal_person_certificat_number,
+      </if>
+      <if test="legalPersonPosition != null">
+        legal_person_position,
+      </if>
+      <if test="registrationTime != null">
+        registration_time,
+      </if>
+      <if test="registeredCapital != null">
+        registered_capital,
+      </if>
+      <if test="actuallyRealizedCapital != null">
+        actually_realized_capital,
+      </if>
+      <if test="certificateType != null">
+        certificate_type,
+      </if>
+      <if test="businessLicenseEffectiveStartDate != null">
+        business_license_effective_start_date,
+      </if>
+      <if test="businessLicenseEffectiveEndDate != null">
+        business_license_effective_end_date,
+      </if>
+      <if test="latestAnnualInspection != null">
+        latest_annual_inspection,
+      </if>
+      <if test="businessPeriod != null">
+        business_period,
+      </if>
+      <if test="businessPeriodEnd != null">
+        business_period_end,
+      </if>
+      <if test="companiesNumber != null">
+        companies_number,
+      </if>
+      <if test="creditCardNumber != null">
+        credit_card_number,
+      </if>
+      <if test="tissueTypes != null">
+        tissue_types,
+      </if>
+      <if test="subordinateIndustry != null">
+        subordinate_industry,
+      </if>
+      <if test="belongstoProvincesCities != null">
+        belongsto_provinces_cities,
+      </if>
+      <if test="actualControllers != null">
+        actual_controllers,
+      </if>
+      <if test="phoneNumber != null">
+        phone_number,
+      </if>
+      <if test="faxNumber != null">
+        fax_number,
+      </if>
+      <if test="contact != null">
+        contact,
+      </if>
+      <if test="contactPhoneNumber != null">
+        contact_phone_number,
+      </if>
+      <if test="registeredAddressCities != null">
+        registered_address_cities,
+      </if>
+      <if test="registeredZipCode != null">
+        registered_zip_code,
+      </if>
+      <if test="mainBusinessScope != null">
+        main_business_scope,
+      </if>
+      <if test="businessAddressCounties != null">
+        business_address_counties,
+      </if>
+      <if test="localZipCode != null">
+        local_zip_code,
+      </if>
+      <if test="organizationCode != null">
+        organization_code,
+      </if>
+      <if test="businessLicenseNumber != null">
+        business_license_number,
+      </if>
+      <if test="spouseBirthday != null">
+        spouse_birthday,
+      </if>
+      <if test="spouseName != null">
+        spouse_name,
+      </if>
+      <if test="spouseGender != null">
+        spouse_gender,
+      </if>
+      <if test="spouseDocumentType != null">
+        spouse_document_type,
+      </if>
+      <if test="spouseIdNumber != null">
+        spouse_id_number,
+      </if>
+      <if test="spouseMobilePhone != null">
+        spouse_mobile_phone,
+      </if>
+      <if test="spouseUnitCode != null">
+        spouse_unit_code,
+      </if>
+      <if test="lastYearNetProfit != null">
+        last_year_net_profit,
+      </if>
+      <if test="lastYearTotalAssets != null">
+        last_year_total_assets,
+      </if>
+      <if test="lastYearNetWorth != null">
+        last_year_net_worth,
+      </if>
+      <if test="lastYearTotalLiabilities != null">
+        last_year_total_liabilities,
+      </if>
+      <if test="enterpriseMonthlyDebt != null">
+        enterprise_monthly_debt,
+      </if>
+      <if test="recentTotalLiabilities != null">
+        recent_total_liabilities,
+      </if>
+      <if test="recentBankLoanBalance != null">
+        recent_bank_loan_balance,
+      </if>
+      <if test="recentTotalAssets != null">
+        recent_total_assets,
+      </if>
+      <if test="recentGuaranteeAssets != null">
+        recent_guarantee_assets,
+      </if>
+      <if test="recentEconomicLitigationCosts != null">
+        recent_economic_litigation_costs,
+      </if>
+      <if test="recentNotBankLoanBalance != null">
+        recent_not_bank_loan_balance,
+      </if>
+      <if test="currentYearTotalProfits != null">
+        current_year_total_profits,
+      </if>
+      <if test="currentYearTotalIncome != null">
+        current_year_total_income,
+      </if>
+      <if test="enterpriseOverview1 != null">
+        enterprise_overview1,
+      </if>
+      <if test="enterpriseOverview2 != null">
+        enterprise_overview2,
+      </if>
+      <if test="customerSize != null">
+        customer_size,
+      </if>
+      <if test="smallBusinessLogo != null">
+        small_business_logo,
+      </if>
+      <if test="groupClientsLogo != null">
+        group_clients_logo,
+      </if>
+      <if test="customerManager != null">
+        customer_manager,
+      </if>
+      <if test="inputUser != null">
+        input_user,
+      </if>
+      <if test="picture != null">
+        picture,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="projectId != null">
+        #{projectId,jdbcType=VARCHAR},
+      </if>
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="formerName != null">
+        #{formerName,jdbcType=VARCHAR},
+      </if>
+      <if test="certificateNumber != null">
+        #{certificateNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        #{gender,jdbcType=CHAR},
+      </if>
+      <if test="birthday != null">
+        #{birthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="maritalStatus != null">
+        #{maritalStatus,jdbcType=CHAR},
+      </if>
+      <if test="hasChildren != null">
+        #{hasChildren,jdbcType=CHAR},
+      </if>
+      <if test="mobilePhoneNumber != null">
+        #{mobilePhoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="censusRegisterSeatDetail != null">
+        #{censusRegisterSeatDetail,jdbcType=VARCHAR},
+      </if>
+      <if test="censusRegisterSeatCounties != null">
+        #{censusRegisterSeatCounties,jdbcType=VARCHAR},
+      </if>
+      <if test="censusRegisterType != null">
+        #{censusRegisterType,jdbcType=VARCHAR},
+      </if>
+      <if test="ftelephone != null">
+        #{ftelephone,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="otherContactInformation != null">
+        #{otherContactInformation,jdbcType=VARCHAR},
+      </if>
+      <if test="otherContactInformationValue != null">
+        #{otherContactInformationValue,jdbcType=VARCHAR},
+      </if>
+      <if test="currentlyCheckinTime != null">
+        #{currentlyCheckinTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="correspondenceCounties != null">
+        #{correspondenceCounties,jdbcType=VARCHAR},
+      </if>
+      <if test="correspondenceDetailAddress != null">
+        #{correspondenceDetailAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="communicationsCode != null">
+        #{communicationsCode,jdbcType=VARCHAR},
+      </if>
+      <if test="workUnits != null">
+        #{workUnits,jdbcType=VARCHAR},
+      </if>
+      <if test="unitType != null">
+        #{unitType,jdbcType=CHAR},
+      </if>
+      <if test="professionalTypes != null">
+        #{professionalTypes,jdbcType=CHAR},
+      </if>
+      <if test="unitCounties != null">
+        #{unitCounties,jdbcType=VARCHAR},
+      </if>
+      <if test="unitAddress != null">
+        #{unitAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="unitPhone != null">
+        #{unitPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="inTime != null">
+        #{inTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="position != null">
+        #{position,jdbcType=VARCHAR},
+      </if>
+      <if test="workTitle != null">
+        #{workTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="highestRecordFormal != null">
+        #{highestRecordFormal,jdbcType=VARCHAR},
+      </if>
+      <if test="education != null">
+        #{education,jdbcType=VARCHAR},
+      </if>
+      <if test="certificate != null">
+        #{certificate,jdbcType=VARCHAR},
+      </if>
+      <if test="nowHousingArea != null">
+        #{nowHousingArea,jdbcType=VARCHAR},
+      </if>
+      <if test="housingType != null">
+        #{housingType,jdbcType=VARCHAR},
+      </if>
+      <if test="hasCar != null">
+        #{hasCar,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleFlatcard != null">
+        #{vehicleFlatcard,jdbcType=VARCHAR},
+      </if>
+      <if test="personalMonthlyIncome != null">
+        #{personalMonthlyIncome,jdbcType=DECIMAL},
+      </if>
+      <if test="personalIncome != null">
+        #{personalIncome,jdbcType=DECIMAL},
+      </if>
+      <if test="naturalPersonType != null">
+        #{naturalPersonType,jdbcType=VARCHAR},
+      </if>
+      <if test="clientAreaType != null">
+        #{clientAreaType,jdbcType=VARCHAR},
+      </if>
+      <if test="groupStaff != null">
+        #{groupStaff,jdbcType=VARCHAR},
+      </if>
+      <if test="comprehensiveImpression != null">
+        #{comprehensiveImpression,jdbcType=VARCHAR},
+      </if>
+      <if test="customerSource != null">
+        #{customerSource,jdbcType=VARCHAR},
+      </if>
+      <if test="added != null">
+        #{added,jdbcType=VARCHAR},
+      </if>
+      <if test="familyAssets != null">
+        #{familyAssets,jdbcType=DECIMAL},
+      </if>
+      <if test="monthLiabilities != null">
+        #{monthLiabilities,jdbcType=DECIMAL},
+      </if>
+      <if test="totalLiabilities != null">
+        #{totalLiabilities,jdbcType=DECIMAL},
+      </if>
+      <if test="censusRegisterSeat != null">
+        #{censusRegisterSeat,jdbcType=VARCHAR},
+      </if>
+      <if test="merchantName != null">
+        #{merchantName,jdbcType=VARCHAR},
+      </if>
+      <if test="businessScope != null">
+        #{businessScope,jdbcType=VARCHAR},
+      </if>
+      <if test="businessOperator != null">
+        #{businessOperator,jdbcType=VARCHAR},
+      </if>
+      <if test="stockholderNum != null">
+        #{stockholderNum,jdbcType=INTEGER},
+      </if>
+      <if test="operateAddr != null">
+        #{operateAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeNum != null">
+        #{employeeNum,jdbcType=INTEGER},
+      </if>
+      <if test="organizeStyle != null">
+        #{organizeStyle,jdbcType=VARCHAR},
+      </if>
+      <if test="operateStartTime != null">
+        #{operateStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="businessProduction != null">
+        #{businessProduction,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null">
+        #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="detailDesc != null">
+        #{detailDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="monthlySales != null">
+        #{monthlySales,jdbcType=VARCHAR},
+      </if>
+      <if test="grossProfitMarginRate != null">
+        #{grossProfitMarginRate,jdbcType=DECIMAL},
+      </if>
+      <if test="netIncomeRate != null">
+        #{netIncomeRate,jdbcType=DECIMAL},
+      </if>
+      <if test="familyMonthlyExpenses != null">
+        #{familyMonthlyExpenses,jdbcType=DECIMAL},
+      </if>
+      <if test="currentInventory != null">
+        #{currentInventory,jdbcType=DECIMAL},
+      </if>
+      <if test="accountsReceivable != null">
+        #{accountsReceivable,jdbcType=DECIMAL},
+      </if>
+      <if test="accountsPayable != null">
+        #{accountsPayable,jdbcType=DECIMAL},
+      </if>
+      <if test="otherRevenue != null">
+        #{otherRevenue,jdbcType=VARCHAR},
+      </if>
+      <if test="nation != null">
+        #{nation,jdbcType=VARCHAR},
+      </if>
+      <if test="workTime != null">
+        #{workTime,jdbcType=VARCHAR},
+      </if>
+      <if test="contacts1 != null">
+        #{contacts1,jdbcType=VARCHAR},
+      </if>
+      <if test="contacts2 != null">
+        #{contacts2,jdbcType=VARCHAR},
+      </if>
+      <if test="contacts3 != null">
+        #{contacts3,jdbcType=VARCHAR},
+      </if>
+      <if test="contactsTel1 != null">
+        #{contactsTel1,jdbcType=VARCHAR},
+      </if>
+      <if test="contactsTel2 != null">
+        #{contactsTel2,jdbcType=VARCHAR},
+      </if>
+      <if test="contactsTel3 != null">
+        #{contactsTel3,jdbcType=VARCHAR},
+      </if>
+      <if test="contactsRelation1 != null">
+        #{contactsRelation1,jdbcType=VARCHAR},
+      </if>
+      <if test="contactsRelation2 != null">
+        #{contactsRelation2,jdbcType=VARCHAR},
+      </if>
+      <if test="contactsRelation3 != null">
+        #{contactsRelation3,jdbcType=VARCHAR},
+      </if>
+      <if test="loanUse != null">
+        #{loanUse,jdbcType=VARCHAR},
+      </if>
+      <if test="annex1 != null">
+        #{annex1,jdbcType=VARCHAR},
+      </if>
+      <if test="annex2 != null">
+        #{annex2,jdbcType=VARCHAR},
+      </if>
+      <if test="annex3 != null">
+        #{annex3,jdbcType=VARCHAR},
+      </if>
+      <if test="annex4 != null">
+        #{annex4,jdbcType=VARCHAR},
+      </if>
+      <if test="annex5 != null">
+        #{annex5,jdbcType=VARCHAR},
+      </if>
+      <if test="annex6 != null">
+        #{annex6,jdbcType=VARCHAR},
+      </if>
+      <if test="annex7 != null">
+        #{annex7,jdbcType=VARCHAR},
+      </if>
+      <if test="annex8 != null">
+        #{annex8,jdbcType=VARCHAR},
+      </if>
+      <if test="annex9 != null">
+        #{annex9,jdbcType=VARCHAR},
+      </if>
+      <if test="annex10 != null">
+        #{annex10,jdbcType=VARCHAR},
+      </if>
+      <if test="delFlag != null">
+        #{delFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="yjAgeLimit != null">
+        #{yjAgeLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="relationAdress != null">
+        #{relationAdress,jdbcType=VARCHAR},
+      </if>
+      <if test="houseNum != null">
+        #{houseNum,jdbcType=INTEGER},
+      </if>
+      <if test="carNum != null">
+        #{carNum,jdbcType=INTEGER},
+      </if>
+      <if test="bankLoanAmount != null">
+        #{bankLoanAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="otherLiabilitiesAccount != null">
+        #{otherLiabilitiesAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="customerName != null">
+        #{customerName,jdbcType=VARCHAR},
+      </if>
+      <if test="customerNumber != null">
+        #{customerNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="referred != null">
+        #{referred,jdbcType=VARCHAR},
+      </if>
+      <if test="enterpriseType != null">
+        #{enterpriseType,jdbcType=CHAR},
+      </if>
+      <if test="currency != null">
+        #{currency,jdbcType=VARCHAR},
+      </if>
+      <if test="legalRepresentative != null">
+        #{legalRepresentative,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonCertificatNumber != null">
+        #{legalPersonCertificatNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonPosition != null">
+        #{legalPersonPosition,jdbcType=VARCHAR},
+      </if>
+      <if test="registrationTime != null">
+        #{registrationTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="registeredCapital != null">
+        #{registeredCapital,jdbcType=DECIMAL},
+      </if>
+      <if test="actuallyRealizedCapital != null">
+        #{actuallyRealizedCapital,jdbcType=DECIMAL},
+      </if>
+      <if test="certificateType != null">
+        #{certificateType,jdbcType=CHAR},
+      </if>
+      <if test="businessLicenseEffectiveStartDate != null">
+        #{businessLicenseEffectiveStartDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="businessLicenseEffectiveEndDate != null">
+        #{businessLicenseEffectiveEndDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="latestAnnualInspection != null">
+        #{latestAnnualInspection,jdbcType=TIMESTAMP},
+      </if>
+      <if test="businessPeriod != null">
+        #{businessPeriod,jdbcType=TIMESTAMP},
+      </if>
+      <if test="businessPeriodEnd != null">
+        #{businessPeriodEnd,jdbcType=VARCHAR},
+      </if>
+      <if test="companiesNumber != null">
+        #{companiesNumber,jdbcType=INTEGER},
+      </if>
+      <if test="creditCardNumber != null">
+        #{creditCardNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="tissueTypes != null">
+        #{tissueTypes,jdbcType=VARCHAR},
+      </if>
+      <if test="subordinateIndustry != null">
+        #{subordinateIndustry,jdbcType=VARCHAR},
+      </if>
+      <if test="belongstoProvincesCities != null">
+        #{belongstoProvincesCities,jdbcType=VARCHAR},
+      </if>
+      <if test="actualControllers != null">
+        #{actualControllers,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneNumber != null">
+        #{phoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="faxNumber != null">
+        #{faxNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="contact != null">
+        #{contact,jdbcType=VARCHAR},
+      </if>
+      <if test="contactPhoneNumber != null">
+        #{contactPhoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="registeredAddressCities != null">
+        #{registeredAddressCities,jdbcType=VARCHAR},
+      </if>
+      <if test="registeredZipCode != null">
+        #{registeredZipCode,jdbcType=VARCHAR},
+      </if>
+      <if test="mainBusinessScope != null">
+        #{mainBusinessScope,jdbcType=VARCHAR},
+      </if>
+      <if test="businessAddressCounties != null">
+        #{businessAddressCounties,jdbcType=VARCHAR},
+      </if>
+      <if test="localZipCode != null">
+        #{localZipCode,jdbcType=VARCHAR},
+      </if>
+      <if test="organizationCode != null">
+        #{organizationCode,jdbcType=VARCHAR},
+      </if>
+      <if test="businessLicenseNumber != null">
+        #{businessLicenseNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseBirthday != null">
+        #{spouseBirthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="spouseName != null">
+        #{spouseName,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseGender != null">
+        #{spouseGender,jdbcType=CHAR},
+      </if>
+      <if test="spouseDocumentType != null">
+        #{spouseDocumentType,jdbcType=CHAR},
+      </if>
+      <if test="spouseIdNumber != null">
+        #{spouseIdNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseMobilePhone != null">
+        #{spouseMobilePhone,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseUnitCode != null">
+        #{spouseUnitCode,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearNetProfit != null">
+        #{lastYearNetProfit,jdbcType=DECIMAL},
+      </if>
+      <if test="lastYearTotalAssets != null">
+        #{lastYearTotalAssets,jdbcType=DECIMAL},
+      </if>
+      <if test="lastYearNetWorth != null">
+        #{lastYearNetWorth,jdbcType=DECIMAL},
+      </if>
+      <if test="lastYearTotalLiabilities != null">
+        #{lastYearTotalLiabilities,jdbcType=DECIMAL},
+      </if>
+      <if test="enterpriseMonthlyDebt != null">
+        #{enterpriseMonthlyDebt,jdbcType=DECIMAL},
+      </if>
+      <if test="recentTotalLiabilities != null">
+        #{recentTotalLiabilities,jdbcType=DECIMAL},
+      </if>
+      <if test="recentBankLoanBalance != null">
+        #{recentBankLoanBalance,jdbcType=DECIMAL},
+      </if>
+      <if test="recentTotalAssets != null">
+        #{recentTotalAssets,jdbcType=DECIMAL},
+      </if>
+      <if test="recentGuaranteeAssets != null">
+        #{recentGuaranteeAssets,jdbcType=DECIMAL},
+      </if>
+      <if test="recentEconomicLitigationCosts != null">
+        #{recentEconomicLitigationCosts,jdbcType=DECIMAL},
+      </if>
+      <if test="recentNotBankLoanBalance != null">
+        #{recentNotBankLoanBalance,jdbcType=DECIMAL},
+      </if>
+      <if test="currentYearTotalProfits != null">
+        #{currentYearTotalProfits,jdbcType=DECIMAL},
+      </if>
+      <if test="currentYearTotalIncome != null">
+        #{currentYearTotalIncome,jdbcType=DECIMAL},
+      </if>
+      <if test="enterpriseOverview1 != null">
+        #{enterpriseOverview1,jdbcType=VARCHAR},
+      </if>
+      <if test="enterpriseOverview2 != null">
+        #{enterpriseOverview2,jdbcType=VARCHAR},
+      </if>
+      <if test="customerSize != null">
+        #{customerSize,jdbcType=VARCHAR},
+      </if>
+      <if test="smallBusinessLogo != null">
+        #{smallBusinessLogo,jdbcType=VARCHAR},
+      </if>
+      <if test="groupClientsLogo != null">
+        #{groupClientsLogo,jdbcType=VARCHAR},
+      </if>
+      <if test="customerManager != null">
+        #{customerManager,jdbcType=VARCHAR},
+      </if>
+      <if test="inputUser != null">
+        #{inputUser,jdbcType=VARCHAR},
+      </if>
+      <if test="picture != null">
+        #{picture,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.ecps.seckill.pojo.BizProjectDetailExample" resultType="java.lang.Long">
+    select count(*) from biz_project_detail
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update biz_project_detail
+    <set>
+      <if test="record.projectId != null">
+        project_id = #{record.projectId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.formerName != null">
+        former_name = #{record.formerName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.certificateNumber != null">
+        certificate_number = #{record.certificateNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.gender != null">
+        gender = #{record.gender,jdbcType=CHAR},
+      </if>
+      <if test="record.birthday != null">
+        birthday = #{record.birthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.maritalStatus != null">
+        marital_status = #{record.maritalStatus,jdbcType=CHAR},
+      </if>
+      <if test="record.hasChildren != null">
+        has_children = #{record.hasChildren,jdbcType=CHAR},
+      </if>
+      <if test="record.mobilePhoneNumber != null">
+        mobile_phone_number = #{record.mobilePhoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.censusRegisterSeatDetail != null">
+        census_register_seat_detail = #{record.censusRegisterSeatDetail,jdbcType=VARCHAR},
+      </if>
+      <if test="record.censusRegisterSeatCounties != null">
+        census_register_seat_counties = #{record.censusRegisterSeatCounties,jdbcType=VARCHAR},
+      </if>
+      <if test="record.censusRegisterType != null">
+        census_register_type = #{record.censusRegisterType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ftelephone != null">
+        ftelephone = #{record.ftelephone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.email != null">
+        email = #{record.email,jdbcType=VARCHAR},
+      </if>
+      <if test="record.otherContactInformation != null">
+        other_contact_information = #{record.otherContactInformation,jdbcType=VARCHAR},
+      </if>
+      <if test="record.otherContactInformationValue != null">
+        other_contact_information_value = #{record.otherContactInformationValue,jdbcType=VARCHAR},
+      </if>
+      <if test="record.currentlyCheckinTime != null">
+        currently_checkin_time = #{record.currentlyCheckinTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.correspondenceCounties != null">
+        correspondence_counties = #{record.correspondenceCounties,jdbcType=VARCHAR},
+      </if>
+      <if test="record.correspondenceDetailAddress != null">
+        correspondence_detail_address = #{record.correspondenceDetailAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.communicationsCode != null">
+        communications_code = #{record.communicationsCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workUnits != null">
+        work_units = #{record.workUnits,jdbcType=VARCHAR},
+      </if>
+      <if test="record.unitType != null">
+        unit_type = #{record.unitType,jdbcType=CHAR},
+      </if>
+      <if test="record.professionalTypes != null">
+        professional_types = #{record.professionalTypes,jdbcType=CHAR},
+      </if>
+      <if test="record.unitCounties != null">
+        unit_counties = #{record.unitCounties,jdbcType=VARCHAR},
+      </if>
+      <if test="record.unitAddress != null">
+        unit_address = #{record.unitAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.unitPhone != null">
+        unit_phone = #{record.unitPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.inTime != null">
+        in_time = #{record.inTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.position != null">
+        position = #{record.position,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workTitle != null">
+        work_title = #{record.workTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="record.highestRecordFormal != null">
+        highest_record_formal = #{record.highestRecordFormal,jdbcType=VARCHAR},
+      </if>
+      <if test="record.education != null">
+        education = #{record.education,jdbcType=VARCHAR},
+      </if>
+      <if test="record.certificate != null">
+        certificate = #{record.certificate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.nowHousingArea != null">
+        now_housing_area = #{record.nowHousingArea,jdbcType=VARCHAR},
+      </if>
+      <if test="record.housingType != null">
+        housing_type = #{record.housingType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.hasCar != null">
+        has_car = #{record.hasCar,jdbcType=VARCHAR},
+      </if>
+      <if test="record.vehicleFlatcard != null">
+        vehicle_flatcard = #{record.vehicleFlatcard,jdbcType=VARCHAR},
+      </if>
+      <if test="record.personalMonthlyIncome != null">
+        personal_monthly_income = #{record.personalMonthlyIncome,jdbcType=DECIMAL},
+      </if>
+      <if test="record.personalIncome != null">
+        personal_income = #{record.personalIncome,jdbcType=DECIMAL},
+      </if>
+      <if test="record.naturalPersonType != null">
+        natural_person_type = #{record.naturalPersonType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.clientAreaType != null">
+        client_area_type = #{record.clientAreaType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.groupStaff != null">
+        group_staff = #{record.groupStaff,jdbcType=VARCHAR},
+      </if>
+      <if test="record.comprehensiveImpression != null">
+        comprehensive_impression = #{record.comprehensiveImpression,jdbcType=VARCHAR},
+      </if>
+      <if test="record.customerSource != null">
+        customer_source = #{record.customerSource,jdbcType=VARCHAR},
+      </if>
+      <if test="record.added != null">
+        added = #{record.added,jdbcType=VARCHAR},
+      </if>
+      <if test="record.familyAssets != null">
+        family_assets = #{record.familyAssets,jdbcType=DECIMAL},
+      </if>
+      <if test="record.monthLiabilities != null">
+        month_liabilities = #{record.monthLiabilities,jdbcType=DECIMAL},
+      </if>
+      <if test="record.totalLiabilities != null">
+        total_liabilities = #{record.totalLiabilities,jdbcType=DECIMAL},
+      </if>
+      <if test="record.censusRegisterSeat != null">
+        census_register_seat = #{record.censusRegisterSeat,jdbcType=VARCHAR},
+      </if>
+      <if test="record.merchantName != null">
+        merchant_name = #{record.merchantName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.businessScope != null">
+        business_scope = #{record.businessScope,jdbcType=VARCHAR},
+      </if>
+      <if test="record.businessOperator != null">
+        business_operator = #{record.businessOperator,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stockholderNum != null">
+        stockholder_num = #{record.stockholderNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.operateAddr != null">
+        operate_addr = #{record.operateAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="record.employeeNum != null">
+        employee_num = #{record.employeeNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.organizeStyle != null">
+        organize_style = #{record.organizeStyle,jdbcType=VARCHAR},
+      </if>
+      <if test="record.operateStartTime != null">
+        operate_start_time = #{record.operateStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.businessProduction != null">
+        business_production = #{record.businessProduction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.area != null">
+        area = #{record.area,jdbcType=VARCHAR},
+      </if>
+      <if test="record.detailDesc != null">
+        detail_desc = #{record.detailDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="record.monthlySales != null">
+        monthly_sales = #{record.monthlySales,jdbcType=VARCHAR},
+      </if>
+      <if test="record.grossProfitMarginRate != null">
+        gross_profit_margin_rate = #{record.grossProfitMarginRate,jdbcType=DECIMAL},
+      </if>
+      <if test="record.netIncomeRate != null">
+        net_income_rate = #{record.netIncomeRate,jdbcType=DECIMAL},
+      </if>
+      <if test="record.familyMonthlyExpenses != null">
+        family_monthly_expenses = #{record.familyMonthlyExpenses,jdbcType=DECIMAL},
+      </if>
+      <if test="record.currentInventory != null">
+        current_inventory = #{record.currentInventory,jdbcType=DECIMAL},
+      </if>
+      <if test="record.accountsReceivable != null">
+        accounts_receivable = #{record.accountsReceivable,jdbcType=DECIMAL},
+      </if>
+      <if test="record.accountsPayable != null">
+        accounts_payable = #{record.accountsPayable,jdbcType=DECIMAL},
+      </if>
+      <if test="record.otherRevenue != null">
+        other_revenue = #{record.otherRevenue,jdbcType=VARCHAR},
+      </if>
+      <if test="record.nation != null">
+        nation = #{record.nation,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workTime != null">
+        work_time = #{record.workTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.contacts1 != null">
+        contacts1 = #{record.contacts1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.contacts2 != null">
+        contacts2 = #{record.contacts2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.contacts3 != null">
+        contacts3 = #{record.contacts3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.contactsTel1 != null">
+        contacts_tel1 = #{record.contactsTel1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.contactsTel2 != null">
+        contacts_tel2 = #{record.contactsTel2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.contactsTel3 != null">
+        contacts_tel3 = #{record.contactsTel3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.contactsRelation1 != null">
+        contacts_relation1 = #{record.contactsRelation1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.contactsRelation2 != null">
+        contacts_relation2 = #{record.contactsRelation2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.contactsRelation3 != null">
+        contacts_relation3 = #{record.contactsRelation3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.loanUse != null">
+        loan_use = #{record.loanUse,jdbcType=VARCHAR},
+      </if>
+      <if test="record.annex1 != null">
+        annex1 = #{record.annex1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.annex2 != null">
+        annex2 = #{record.annex2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.annex3 != null">
+        annex3 = #{record.annex3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.annex4 != null">
+        annex4 = #{record.annex4,jdbcType=VARCHAR},
+      </if>
+      <if test="record.annex5 != null">
+        annex5 = #{record.annex5,jdbcType=VARCHAR},
+      </if>
+      <if test="record.annex6 != null">
+        annex6 = #{record.annex6,jdbcType=VARCHAR},
+      </if>
+      <if test="record.annex7 != null">
+        annex7 = #{record.annex7,jdbcType=VARCHAR},
+      </if>
+      <if test="record.annex8 != null">
+        annex8 = #{record.annex8,jdbcType=VARCHAR},
+      </if>
+      <if test="record.annex9 != null">
+        annex9 = #{record.annex9,jdbcType=VARCHAR},
+      </if>
+      <if test="record.annex10 != null">
+        annex10 = #{record.annex10,jdbcType=VARCHAR},
+      </if>
+      <if test="record.delFlag != null">
+        del_flag = #{record.delFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="record.yjAgeLimit != null">
+        yj_age_limit = #{record.yjAgeLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="record.relationAdress != null">
+        relation_adress = #{record.relationAdress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.houseNum != null">
+        house_num = #{record.houseNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.carNum != null">
+        car_num = #{record.carNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.bankLoanAmount != null">
+        bank_loan_amount = #{record.bankLoanAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="record.otherLiabilitiesAccount != null">
+        other_liabilities_account = #{record.otherLiabilitiesAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="record.customerName != null">
+        customer_name = #{record.customerName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.customerNumber != null">
+        customer_number = #{record.customerNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.referred != null">
+        referred = #{record.referred,jdbcType=VARCHAR},
+      </if>
+      <if test="record.enterpriseType != null">
+        enterprise_type = #{record.enterpriseType,jdbcType=CHAR},
+      </if>
+      <if test="record.currency != null">
+        currency = #{record.currency,jdbcType=VARCHAR},
+      </if>
+      <if test="record.legalRepresentative != null">
+        legal_representative = #{record.legalRepresentative,jdbcType=VARCHAR},
+      </if>
+      <if test="record.legalPersonCertificatNumber != null">
+        legal_person_certificat_number = #{record.legalPersonCertificatNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.legalPersonPosition != null">
+        legal_person_position = #{record.legalPersonPosition,jdbcType=VARCHAR},
+      </if>
+      <if test="record.registrationTime != null">
+        registration_time = #{record.registrationTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.registeredCapital != null">
+        registered_capital = #{record.registeredCapital,jdbcType=DECIMAL},
+      </if>
+      <if test="record.actuallyRealizedCapital != null">
+        actually_realized_capital = #{record.actuallyRealizedCapital,jdbcType=DECIMAL},
+      </if>
+      <if test="record.certificateType != null">
+        certificate_type = #{record.certificateType,jdbcType=CHAR},
+      </if>
+      <if test="record.businessLicenseEffectiveStartDate != null">
+        business_license_effective_start_date = #{record.businessLicenseEffectiveStartDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.businessLicenseEffectiveEndDate != null">
+        business_license_effective_end_date = #{record.businessLicenseEffectiveEndDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.latestAnnualInspection != null">
+        latest_annual_inspection = #{record.latestAnnualInspection,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.businessPeriod != null">
+        business_period = #{record.businessPeriod,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.businessPeriodEnd != null">
+        business_period_end = #{record.businessPeriodEnd,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companiesNumber != null">
+        companies_number = #{record.companiesNumber,jdbcType=INTEGER},
+      </if>
+      <if test="record.creditCardNumber != null">
+        credit_card_number = #{record.creditCardNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tissueTypes != null">
+        tissue_types = #{record.tissueTypes,jdbcType=VARCHAR},
+      </if>
+      <if test="record.subordinateIndustry != null">
+        subordinate_industry = #{record.subordinateIndustry,jdbcType=VARCHAR},
+      </if>
+      <if test="record.belongstoProvincesCities != null">
+        belongsto_provinces_cities = #{record.belongstoProvincesCities,jdbcType=VARCHAR},
+      </if>
+      <if test="record.actualControllers != null">
+        actual_controllers = #{record.actualControllers,jdbcType=VARCHAR},
+      </if>
+      <if test="record.phoneNumber != null">
+        phone_number = #{record.phoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.faxNumber != null">
+        fax_number = #{record.faxNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.contact != null">
+        contact = #{record.contact,jdbcType=VARCHAR},
+      </if>
+      <if test="record.contactPhoneNumber != null">
+        contact_phone_number = #{record.contactPhoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.registeredAddressCities != null">
+        registered_address_cities = #{record.registeredAddressCities,jdbcType=VARCHAR},
+      </if>
+      <if test="record.registeredZipCode != null">
+        registered_zip_code = #{record.registeredZipCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mainBusinessScope != null">
+        main_business_scope = #{record.mainBusinessScope,jdbcType=VARCHAR},
+      </if>
+      <if test="record.businessAddressCounties != null">
+        business_address_counties = #{record.businessAddressCounties,jdbcType=VARCHAR},
+      </if>
+      <if test="record.localZipCode != null">
+        local_zip_code = #{record.localZipCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.organizationCode != null">
+        organization_code = #{record.organizationCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.businessLicenseNumber != null">
+        business_license_number = #{record.businessLicenseNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.spouseBirthday != null">
+        spouse_birthday = #{record.spouseBirthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.spouseName != null">
+        spouse_name = #{record.spouseName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.spouseGender != null">
+        spouse_gender = #{record.spouseGender,jdbcType=CHAR},
+      </if>
+      <if test="record.spouseDocumentType != null">
+        spouse_document_type = #{record.spouseDocumentType,jdbcType=CHAR},
+      </if>
+      <if test="record.spouseIdNumber != null">
+        spouse_id_number = #{record.spouseIdNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.spouseMobilePhone != null">
+        spouse_mobile_phone = #{record.spouseMobilePhone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.spouseUnitCode != null">
+        spouse_unit_code = #{record.spouseUnitCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.lastYearNetProfit != null">
+        last_year_net_profit = #{record.lastYearNetProfit,jdbcType=DECIMAL},
+      </if>
+      <if test="record.lastYearTotalAssets != null">
+        last_year_total_assets = #{record.lastYearTotalAssets,jdbcType=DECIMAL},
+      </if>
+      <if test="record.lastYearNetWorth != null">
+        last_year_net_worth = #{record.lastYearNetWorth,jdbcType=DECIMAL},
+      </if>
+      <if test="record.lastYearTotalLiabilities != null">
+        last_year_total_liabilities = #{record.lastYearTotalLiabilities,jdbcType=DECIMAL},
+      </if>
+      <if test="record.enterpriseMonthlyDebt != null">
+        enterprise_monthly_debt = #{record.enterpriseMonthlyDebt,jdbcType=DECIMAL},
+      </if>
+      <if test="record.recentTotalLiabilities != null">
+        recent_total_liabilities = #{record.recentTotalLiabilities,jdbcType=DECIMAL},
+      </if>
+      <if test="record.recentBankLoanBalance != null">
+        recent_bank_loan_balance = #{record.recentBankLoanBalance,jdbcType=DECIMAL},
+      </if>
+      <if test="record.recentTotalAssets != null">
+        recent_total_assets = #{record.recentTotalAssets,jdbcType=DECIMAL},
+      </if>
+      <if test="record.recentGuaranteeAssets != null">
+        recent_guarantee_assets = #{record.recentGuaranteeAssets,jdbcType=DECIMAL},
+      </if>
+      <if test="record.recentEconomicLitigationCosts != null">
+        recent_economic_litigation_costs = #{record.recentEconomicLitigationCosts,jdbcType=DECIMAL},
+      </if>
+      <if test="record.recentNotBankLoanBalance != null">
+        recent_not_bank_loan_balance = #{record.recentNotBankLoanBalance,jdbcType=DECIMAL},
+      </if>
+      <if test="record.currentYearTotalProfits != null">
+        current_year_total_profits = #{record.currentYearTotalProfits,jdbcType=DECIMAL},
+      </if>
+      <if test="record.currentYearTotalIncome != null">
+        current_year_total_income = #{record.currentYearTotalIncome,jdbcType=DECIMAL},
+      </if>
+      <if test="record.enterpriseOverview1 != null">
+        enterprise_overview1 = #{record.enterpriseOverview1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.enterpriseOverview2 != null">
+        enterprise_overview2 = #{record.enterpriseOverview2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.customerSize != null">
+        customer_size = #{record.customerSize,jdbcType=VARCHAR},
+      </if>
+      <if test="record.smallBusinessLogo != null">
+        small_business_logo = #{record.smallBusinessLogo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.groupClientsLogo != null">
+        group_clients_logo = #{record.groupClientsLogo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.customerManager != null">
+        customer_manager = #{record.customerManager,jdbcType=VARCHAR},
+      </if>
+      <if test="record.inputUser != null">
+        input_user = #{record.inputUser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.picture != null">
+        picture = #{record.picture,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map">
+    update biz_project_detail
+    set project_id = #{record.projectId,jdbcType=VARCHAR},
+      id = #{record.id,jdbcType=VARCHAR},
+      former_name = #{record.formerName,jdbcType=VARCHAR},
+      certificate_number = #{record.certificateNumber,jdbcType=VARCHAR},
+      gender = #{record.gender,jdbcType=CHAR},
+      birthday = #{record.birthday,jdbcType=TIMESTAMP},
+      marital_status = #{record.maritalStatus,jdbcType=CHAR},
+      has_children = #{record.hasChildren,jdbcType=CHAR},
+      mobile_phone_number = #{record.mobilePhoneNumber,jdbcType=VARCHAR},
+      census_register_seat_detail = #{record.censusRegisterSeatDetail,jdbcType=VARCHAR},
+      census_register_seat_counties = #{record.censusRegisterSeatCounties,jdbcType=VARCHAR},
+      census_register_type = #{record.censusRegisterType,jdbcType=VARCHAR},
+      ftelephone = #{record.ftelephone,jdbcType=VARCHAR},
+      email = #{record.email,jdbcType=VARCHAR},
+      other_contact_information = #{record.otherContactInformation,jdbcType=VARCHAR},
+      other_contact_information_value = #{record.otherContactInformationValue,jdbcType=VARCHAR},
+      currently_checkin_time = #{record.currentlyCheckinTime,jdbcType=TIMESTAMP},
+      correspondence_counties = #{record.correspondenceCounties,jdbcType=VARCHAR},
+      correspondence_detail_address = #{record.correspondenceDetailAddress,jdbcType=VARCHAR},
+      communications_code = #{record.communicationsCode,jdbcType=VARCHAR},
+      work_units = #{record.workUnits,jdbcType=VARCHAR},
+      unit_type = #{record.unitType,jdbcType=CHAR},
+      professional_types = #{record.professionalTypes,jdbcType=CHAR},
+      unit_counties = #{record.unitCounties,jdbcType=VARCHAR},
+      unit_address = #{record.unitAddress,jdbcType=VARCHAR},
+      unit_phone = #{record.unitPhone,jdbcType=VARCHAR},
+      in_time = #{record.inTime,jdbcType=TIMESTAMP},
+      position = #{record.position,jdbcType=VARCHAR},
+      work_title = #{record.workTitle,jdbcType=VARCHAR},
+      highest_record_formal = #{record.highestRecordFormal,jdbcType=VARCHAR},
+      education = #{record.education,jdbcType=VARCHAR},
+      certificate = #{record.certificate,jdbcType=VARCHAR},
+      now_housing_area = #{record.nowHousingArea,jdbcType=VARCHAR},
+      housing_type = #{record.housingType,jdbcType=VARCHAR},
+      has_car = #{record.hasCar,jdbcType=VARCHAR},
+      vehicle_flatcard = #{record.vehicleFlatcard,jdbcType=VARCHAR},
+      personal_monthly_income = #{record.personalMonthlyIncome,jdbcType=DECIMAL},
+      personal_income = #{record.personalIncome,jdbcType=DECIMAL},
+      natural_person_type = #{record.naturalPersonType,jdbcType=VARCHAR},
+      client_area_type = #{record.clientAreaType,jdbcType=VARCHAR},
+      group_staff = #{record.groupStaff,jdbcType=VARCHAR},
+      comprehensive_impression = #{record.comprehensiveImpression,jdbcType=VARCHAR},
+      customer_source = #{record.customerSource,jdbcType=VARCHAR},
+      added = #{record.added,jdbcType=VARCHAR},
+      family_assets = #{record.familyAssets,jdbcType=DECIMAL},
+      month_liabilities = #{record.monthLiabilities,jdbcType=DECIMAL},
+      total_liabilities = #{record.totalLiabilities,jdbcType=DECIMAL},
+      census_register_seat = #{record.censusRegisterSeat,jdbcType=VARCHAR},
+      merchant_name = #{record.merchantName,jdbcType=VARCHAR},
+      business_scope = #{record.businessScope,jdbcType=VARCHAR},
+      business_operator = #{record.businessOperator,jdbcType=VARCHAR},
+      stockholder_num = #{record.stockholderNum,jdbcType=INTEGER},
+      operate_addr = #{record.operateAddr,jdbcType=VARCHAR},
+      employee_num = #{record.employeeNum,jdbcType=INTEGER},
+      organize_style = #{record.organizeStyle,jdbcType=VARCHAR},
+      operate_start_time = #{record.operateStartTime,jdbcType=TIMESTAMP},
+      business_production = #{record.businessProduction,jdbcType=VARCHAR},
+      area = #{record.area,jdbcType=VARCHAR},
+      detail_desc = #{record.detailDesc,jdbcType=VARCHAR},
+      monthly_sales = #{record.monthlySales,jdbcType=VARCHAR},
+      gross_profit_margin_rate = #{record.grossProfitMarginRate,jdbcType=DECIMAL},
+      net_income_rate = #{record.netIncomeRate,jdbcType=DECIMAL},
+      family_monthly_expenses = #{record.familyMonthlyExpenses,jdbcType=DECIMAL},
+      current_inventory = #{record.currentInventory,jdbcType=DECIMAL},
+      accounts_receivable = #{record.accountsReceivable,jdbcType=DECIMAL},
+      accounts_payable = #{record.accountsPayable,jdbcType=DECIMAL},
+      other_revenue = #{record.otherRevenue,jdbcType=VARCHAR},
+      nation = #{record.nation,jdbcType=VARCHAR},
+      work_time = #{record.workTime,jdbcType=VARCHAR},
+      contacts1 = #{record.contacts1,jdbcType=VARCHAR},
+      contacts2 = #{record.contacts2,jdbcType=VARCHAR},
+      contacts3 = #{record.contacts3,jdbcType=VARCHAR},
+      contacts_tel1 = #{record.contactsTel1,jdbcType=VARCHAR},
+      contacts_tel2 = #{record.contactsTel2,jdbcType=VARCHAR},
+      contacts_tel3 = #{record.contactsTel3,jdbcType=VARCHAR},
+      contacts_relation1 = #{record.contactsRelation1,jdbcType=VARCHAR},
+      contacts_relation2 = #{record.contactsRelation2,jdbcType=VARCHAR},
+      contacts_relation3 = #{record.contactsRelation3,jdbcType=VARCHAR},
+      loan_use = #{record.loanUse,jdbcType=VARCHAR},
+      annex1 = #{record.annex1,jdbcType=VARCHAR},
+      annex2 = #{record.annex2,jdbcType=VARCHAR},
+      annex3 = #{record.annex3,jdbcType=VARCHAR},
+      annex4 = #{record.annex4,jdbcType=VARCHAR},
+      annex5 = #{record.annex5,jdbcType=VARCHAR},
+      annex6 = #{record.annex6,jdbcType=VARCHAR},
+      annex7 = #{record.annex7,jdbcType=VARCHAR},
+      annex8 = #{record.annex8,jdbcType=VARCHAR},
+      annex9 = #{record.annex9,jdbcType=VARCHAR},
+      annex10 = #{record.annex10,jdbcType=VARCHAR},
+      del_flag = #{record.delFlag,jdbcType=VARCHAR},
+      yj_age_limit = #{record.yjAgeLimit,jdbcType=VARCHAR},
+      relation_adress = #{record.relationAdress,jdbcType=VARCHAR},
+      house_num = #{record.houseNum,jdbcType=INTEGER},
+      car_num = #{record.carNum,jdbcType=INTEGER},
+      bank_loan_amount = #{record.bankLoanAmount,jdbcType=VARCHAR},
+      other_liabilities_account = #{record.otherLiabilitiesAccount,jdbcType=VARCHAR},
+      customer_name = #{record.customerName,jdbcType=VARCHAR},
+      customer_number = #{record.customerNumber,jdbcType=VARCHAR},
+      referred = #{record.referred,jdbcType=VARCHAR},
+      enterprise_type = #{record.enterpriseType,jdbcType=CHAR},
+      currency = #{record.currency,jdbcType=VARCHAR},
+      legal_representative = #{record.legalRepresentative,jdbcType=VARCHAR},
+      legal_person_certificat_number = #{record.legalPersonCertificatNumber,jdbcType=VARCHAR},
+      legal_person_position = #{record.legalPersonPosition,jdbcType=VARCHAR},
+      registration_time = #{record.registrationTime,jdbcType=TIMESTAMP},
+      registered_capital = #{record.registeredCapital,jdbcType=DECIMAL},
+      actually_realized_capital = #{record.actuallyRealizedCapital,jdbcType=DECIMAL},
+      certificate_type = #{record.certificateType,jdbcType=CHAR},
+      business_license_effective_start_date = #{record.businessLicenseEffectiveStartDate,jdbcType=TIMESTAMP},
+      business_license_effective_end_date = #{record.businessLicenseEffectiveEndDate,jdbcType=TIMESTAMP},
+      latest_annual_inspection = #{record.latestAnnualInspection,jdbcType=TIMESTAMP},
+      business_period = #{record.businessPeriod,jdbcType=TIMESTAMP},
+      business_period_end = #{record.businessPeriodEnd,jdbcType=VARCHAR},
+      companies_number = #{record.companiesNumber,jdbcType=INTEGER},
+      credit_card_number = #{record.creditCardNumber,jdbcType=VARCHAR},
+      tissue_types = #{record.tissueTypes,jdbcType=VARCHAR},
+      subordinate_industry = #{record.subordinateIndustry,jdbcType=VARCHAR},
+      belongsto_provinces_cities = #{record.belongstoProvincesCities,jdbcType=VARCHAR},
+      actual_controllers = #{record.actualControllers,jdbcType=VARCHAR},
+      phone_number = #{record.phoneNumber,jdbcType=VARCHAR},
+      fax_number = #{record.faxNumber,jdbcType=VARCHAR},
+      contact = #{record.contact,jdbcType=VARCHAR},
+      contact_phone_number = #{record.contactPhoneNumber,jdbcType=VARCHAR},
+      registered_address_cities = #{record.registeredAddressCities,jdbcType=VARCHAR},
+      registered_zip_code = #{record.registeredZipCode,jdbcType=VARCHAR},
+      main_business_scope = #{record.mainBusinessScope,jdbcType=VARCHAR},
+      business_address_counties = #{record.businessAddressCounties,jdbcType=VARCHAR},
+      local_zip_code = #{record.localZipCode,jdbcType=VARCHAR},
+      organization_code = #{record.organizationCode,jdbcType=VARCHAR},
+      business_license_number = #{record.businessLicenseNumber,jdbcType=VARCHAR},
+      spouse_birthday = #{record.spouseBirthday,jdbcType=TIMESTAMP},
+      spouse_name = #{record.spouseName,jdbcType=VARCHAR},
+      spouse_gender = #{record.spouseGender,jdbcType=CHAR},
+      spouse_document_type = #{record.spouseDocumentType,jdbcType=CHAR},
+      spouse_id_number = #{record.spouseIdNumber,jdbcType=VARCHAR},
+      spouse_mobile_phone = #{record.spouseMobilePhone,jdbcType=VARCHAR},
+      spouse_unit_code = #{record.spouseUnitCode,jdbcType=VARCHAR},
+      last_year_net_profit = #{record.lastYearNetProfit,jdbcType=DECIMAL},
+      last_year_total_assets = #{record.lastYearTotalAssets,jdbcType=DECIMAL},
+      last_year_net_worth = #{record.lastYearNetWorth,jdbcType=DECIMAL},
+      last_year_total_liabilities = #{record.lastYearTotalLiabilities,jdbcType=DECIMAL},
+      enterprise_monthly_debt = #{record.enterpriseMonthlyDebt,jdbcType=DECIMAL},
+      recent_total_liabilities = #{record.recentTotalLiabilities,jdbcType=DECIMAL},
+      recent_bank_loan_balance = #{record.recentBankLoanBalance,jdbcType=DECIMAL},
+      recent_total_assets = #{record.recentTotalAssets,jdbcType=DECIMAL},
+      recent_guarantee_assets = #{record.recentGuaranteeAssets,jdbcType=DECIMAL},
+      recent_economic_litigation_costs = #{record.recentEconomicLitigationCosts,jdbcType=DECIMAL},
+      recent_not_bank_loan_balance = #{record.recentNotBankLoanBalance,jdbcType=DECIMAL},
+      current_year_total_profits = #{record.currentYearTotalProfits,jdbcType=DECIMAL},
+      current_year_total_income = #{record.currentYearTotalIncome,jdbcType=DECIMAL},
+      enterprise_overview1 = #{record.enterpriseOverview1,jdbcType=VARCHAR},
+      enterprise_overview2 = #{record.enterpriseOverview2,jdbcType=VARCHAR},
+      customer_size = #{record.customerSize,jdbcType=VARCHAR},
+      small_business_logo = #{record.smallBusinessLogo,jdbcType=VARCHAR},
+      group_clients_logo = #{record.groupClientsLogo,jdbcType=VARCHAR},
+      customer_manager = #{record.customerManager,jdbcType=VARCHAR},
+      input_user = #{record.inputUser,jdbcType=VARCHAR},
+      picture = #{record.picture,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update biz_project_detail
+    set project_id = #{record.projectId,jdbcType=VARCHAR},
+      id = #{record.id,jdbcType=VARCHAR},
+      former_name = #{record.formerName,jdbcType=VARCHAR},
+      certificate_number = #{record.certificateNumber,jdbcType=VARCHAR},
+      gender = #{record.gender,jdbcType=CHAR},
+      birthday = #{record.birthday,jdbcType=TIMESTAMP},
+      marital_status = #{record.maritalStatus,jdbcType=CHAR},
+      has_children = #{record.hasChildren,jdbcType=CHAR},
+      mobile_phone_number = #{record.mobilePhoneNumber,jdbcType=VARCHAR},
+      census_register_seat_detail = #{record.censusRegisterSeatDetail,jdbcType=VARCHAR},
+      census_register_seat_counties = #{record.censusRegisterSeatCounties,jdbcType=VARCHAR},
+      census_register_type = #{record.censusRegisterType,jdbcType=VARCHAR},
+      ftelephone = #{record.ftelephone,jdbcType=VARCHAR},
+      email = #{record.email,jdbcType=VARCHAR},
+      other_contact_information = #{record.otherContactInformation,jdbcType=VARCHAR},
+      other_contact_information_value = #{record.otherContactInformationValue,jdbcType=VARCHAR},
+      currently_checkin_time = #{record.currentlyCheckinTime,jdbcType=TIMESTAMP},
+      correspondence_counties = #{record.correspondenceCounties,jdbcType=VARCHAR},
+      correspondence_detail_address = #{record.correspondenceDetailAddress,jdbcType=VARCHAR},
+      communications_code = #{record.communicationsCode,jdbcType=VARCHAR},
+      work_units = #{record.workUnits,jdbcType=VARCHAR},
+      unit_type = #{record.unitType,jdbcType=CHAR},
+      professional_types = #{record.professionalTypes,jdbcType=CHAR},
+      unit_counties = #{record.unitCounties,jdbcType=VARCHAR},
+      unit_address = #{record.unitAddress,jdbcType=VARCHAR},
+      unit_phone = #{record.unitPhone,jdbcType=VARCHAR},
+      in_time = #{record.inTime,jdbcType=TIMESTAMP},
+      position = #{record.position,jdbcType=VARCHAR},
+      work_title = #{record.workTitle,jdbcType=VARCHAR},
+      highest_record_formal = #{record.highestRecordFormal,jdbcType=VARCHAR},
+      education = #{record.education,jdbcType=VARCHAR},
+      certificate = #{record.certificate,jdbcType=VARCHAR},
+      now_housing_area = #{record.nowHousingArea,jdbcType=VARCHAR},
+      housing_type = #{record.housingType,jdbcType=VARCHAR},
+      has_car = #{record.hasCar,jdbcType=VARCHAR},
+      vehicle_flatcard = #{record.vehicleFlatcard,jdbcType=VARCHAR},
+      personal_monthly_income = #{record.personalMonthlyIncome,jdbcType=DECIMAL},
+      personal_income = #{record.personalIncome,jdbcType=DECIMAL},
+      natural_person_type = #{record.naturalPersonType,jdbcType=VARCHAR},
+      client_area_type = #{record.clientAreaType,jdbcType=VARCHAR},
+      group_staff = #{record.groupStaff,jdbcType=VARCHAR},
+      comprehensive_impression = #{record.comprehensiveImpression,jdbcType=VARCHAR},
+      customer_source = #{record.customerSource,jdbcType=VARCHAR},
+      added = #{record.added,jdbcType=VARCHAR},
+      family_assets = #{record.familyAssets,jdbcType=DECIMAL},
+      month_liabilities = #{record.monthLiabilities,jdbcType=DECIMAL},
+      total_liabilities = #{record.totalLiabilities,jdbcType=DECIMAL},
+      census_register_seat = #{record.censusRegisterSeat,jdbcType=VARCHAR},
+      merchant_name = #{record.merchantName,jdbcType=VARCHAR},
+      business_scope = #{record.businessScope,jdbcType=VARCHAR},
+      business_operator = #{record.businessOperator,jdbcType=VARCHAR},
+      stockholder_num = #{record.stockholderNum,jdbcType=INTEGER},
+      operate_addr = #{record.operateAddr,jdbcType=VARCHAR},
+      employee_num = #{record.employeeNum,jdbcType=INTEGER},
+      organize_style = #{record.organizeStyle,jdbcType=VARCHAR},
+      operate_start_time = #{record.operateStartTime,jdbcType=TIMESTAMP},
+      business_production = #{record.businessProduction,jdbcType=VARCHAR},
+      area = #{record.area,jdbcType=VARCHAR},
+      detail_desc = #{record.detailDesc,jdbcType=VARCHAR},
+      monthly_sales = #{record.monthlySales,jdbcType=VARCHAR},
+      gross_profit_margin_rate = #{record.grossProfitMarginRate,jdbcType=DECIMAL},
+      net_income_rate = #{record.netIncomeRate,jdbcType=DECIMAL},
+      family_monthly_expenses = #{record.familyMonthlyExpenses,jdbcType=DECIMAL},
+      current_inventory = #{record.currentInventory,jdbcType=DECIMAL},
+      accounts_receivable = #{record.accountsReceivable,jdbcType=DECIMAL},
+      accounts_payable = #{record.accountsPayable,jdbcType=DECIMAL},
+      other_revenue = #{record.otherRevenue,jdbcType=VARCHAR},
+      nation = #{record.nation,jdbcType=VARCHAR},
+      work_time = #{record.workTime,jdbcType=VARCHAR},
+      contacts1 = #{record.contacts1,jdbcType=VARCHAR},
+      contacts2 = #{record.contacts2,jdbcType=VARCHAR},
+      contacts3 = #{record.contacts3,jdbcType=VARCHAR},
+      contacts_tel1 = #{record.contactsTel1,jdbcType=VARCHAR},
+      contacts_tel2 = #{record.contactsTel2,jdbcType=VARCHAR},
+      contacts_tel3 = #{record.contactsTel3,jdbcType=VARCHAR},
+      contacts_relation1 = #{record.contactsRelation1,jdbcType=VARCHAR},
+      contacts_relation2 = #{record.contactsRelation2,jdbcType=VARCHAR},
+      contacts_relation3 = #{record.contactsRelation3,jdbcType=VARCHAR},
+      loan_use = #{record.loanUse,jdbcType=VARCHAR},
+      annex1 = #{record.annex1,jdbcType=VARCHAR},
+      annex2 = #{record.annex2,jdbcType=VARCHAR},
+      annex3 = #{record.annex3,jdbcType=VARCHAR},
+      annex4 = #{record.annex4,jdbcType=VARCHAR},
+      annex5 = #{record.annex5,jdbcType=VARCHAR},
+      annex6 = #{record.annex6,jdbcType=VARCHAR},
+      annex7 = #{record.annex7,jdbcType=VARCHAR},
+      annex8 = #{record.annex8,jdbcType=VARCHAR},
+      annex9 = #{record.annex9,jdbcType=VARCHAR},
+      annex10 = #{record.annex10,jdbcType=VARCHAR},
+      del_flag = #{record.delFlag,jdbcType=VARCHAR},
+      yj_age_limit = #{record.yjAgeLimit,jdbcType=VARCHAR},
+      relation_adress = #{record.relationAdress,jdbcType=VARCHAR},
+      house_num = #{record.houseNum,jdbcType=INTEGER},
+      car_num = #{record.carNum,jdbcType=INTEGER},
+      bank_loan_amount = #{record.bankLoanAmount,jdbcType=VARCHAR},
+      other_liabilities_account = #{record.otherLiabilitiesAccount,jdbcType=VARCHAR},
+      customer_name = #{record.customerName,jdbcType=VARCHAR},
+      customer_number = #{record.customerNumber,jdbcType=VARCHAR},
+      referred = #{record.referred,jdbcType=VARCHAR},
+      enterprise_type = #{record.enterpriseType,jdbcType=CHAR},
+      currency = #{record.currency,jdbcType=VARCHAR},
+      legal_representative = #{record.legalRepresentative,jdbcType=VARCHAR},
+      legal_person_certificat_number = #{record.legalPersonCertificatNumber,jdbcType=VARCHAR},
+      legal_person_position = #{record.legalPersonPosition,jdbcType=VARCHAR},
+      registration_time = #{record.registrationTime,jdbcType=TIMESTAMP},
+      registered_capital = #{record.registeredCapital,jdbcType=DECIMAL},
+      actually_realized_capital = #{record.actuallyRealizedCapital,jdbcType=DECIMAL},
+      certificate_type = #{record.certificateType,jdbcType=CHAR},
+      business_license_effective_start_date = #{record.businessLicenseEffectiveStartDate,jdbcType=TIMESTAMP},
+      business_license_effective_end_date = #{record.businessLicenseEffectiveEndDate,jdbcType=TIMESTAMP},
+      latest_annual_inspection = #{record.latestAnnualInspection,jdbcType=TIMESTAMP},
+      business_period = #{record.businessPeriod,jdbcType=TIMESTAMP},
+      business_period_end = #{record.businessPeriodEnd,jdbcType=VARCHAR},
+      companies_number = #{record.companiesNumber,jdbcType=INTEGER},
+      credit_card_number = #{record.creditCardNumber,jdbcType=VARCHAR},
+      tissue_types = #{record.tissueTypes,jdbcType=VARCHAR},
+      subordinate_industry = #{record.subordinateIndustry,jdbcType=VARCHAR},
+      belongsto_provinces_cities = #{record.belongstoProvincesCities,jdbcType=VARCHAR},
+      actual_controllers = #{record.actualControllers,jdbcType=VARCHAR},
+      phone_number = #{record.phoneNumber,jdbcType=VARCHAR},
+      fax_number = #{record.faxNumber,jdbcType=VARCHAR},
+      contact = #{record.contact,jdbcType=VARCHAR},
+      contact_phone_number = #{record.contactPhoneNumber,jdbcType=VARCHAR},
+      registered_address_cities = #{record.registeredAddressCities,jdbcType=VARCHAR},
+      registered_zip_code = #{record.registeredZipCode,jdbcType=VARCHAR},
+      main_business_scope = #{record.mainBusinessScope,jdbcType=VARCHAR},
+      business_address_counties = #{record.businessAddressCounties,jdbcType=VARCHAR},
+      local_zip_code = #{record.localZipCode,jdbcType=VARCHAR},
+      organization_code = #{record.organizationCode,jdbcType=VARCHAR},
+      business_license_number = #{record.businessLicenseNumber,jdbcType=VARCHAR},
+      spouse_birthday = #{record.spouseBirthday,jdbcType=TIMESTAMP},
+      spouse_name = #{record.spouseName,jdbcType=VARCHAR},
+      spouse_gender = #{record.spouseGender,jdbcType=CHAR},
+      spouse_document_type = #{record.spouseDocumentType,jdbcType=CHAR},
+      spouse_id_number = #{record.spouseIdNumber,jdbcType=VARCHAR},
+      spouse_mobile_phone = #{record.spouseMobilePhone,jdbcType=VARCHAR},
+      spouse_unit_code = #{record.spouseUnitCode,jdbcType=VARCHAR},
+      last_year_net_profit = #{record.lastYearNetProfit,jdbcType=DECIMAL},
+      last_year_total_assets = #{record.lastYearTotalAssets,jdbcType=DECIMAL},
+      last_year_net_worth = #{record.lastYearNetWorth,jdbcType=DECIMAL},
+      last_year_total_liabilities = #{record.lastYearTotalLiabilities,jdbcType=DECIMAL},
+      enterprise_monthly_debt = #{record.enterpriseMonthlyDebt,jdbcType=DECIMAL},
+      recent_total_liabilities = #{record.recentTotalLiabilities,jdbcType=DECIMAL},
+      recent_bank_loan_balance = #{record.recentBankLoanBalance,jdbcType=DECIMAL},
+      recent_total_assets = #{record.recentTotalAssets,jdbcType=DECIMAL},
+      recent_guarantee_assets = #{record.recentGuaranteeAssets,jdbcType=DECIMAL},
+      recent_economic_litigation_costs = #{record.recentEconomicLitigationCosts,jdbcType=DECIMAL},
+      recent_not_bank_loan_balance = #{record.recentNotBankLoanBalance,jdbcType=DECIMAL},
+      current_year_total_profits = #{record.currentYearTotalProfits,jdbcType=DECIMAL},
+      current_year_total_income = #{record.currentYearTotalIncome,jdbcType=DECIMAL},
+      enterprise_overview1 = #{record.enterpriseOverview1,jdbcType=VARCHAR},
+      enterprise_overview2 = #{record.enterpriseOverview2,jdbcType=VARCHAR},
+      customer_size = #{record.customerSize,jdbcType=VARCHAR},
+      small_business_logo = #{record.smallBusinessLogo,jdbcType=VARCHAR},
+      group_clients_logo = #{record.groupClientsLogo,jdbcType=VARCHAR},
+      customer_manager = #{record.customerManager,jdbcType=VARCHAR},
+      input_user = #{record.inputUser,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ecps.seckill.pojo.BizProjectDetail">
+    update biz_project_detail
+    <set>
+      <if test="id != null">
+        id = #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="formerName != null">
+        former_name = #{formerName,jdbcType=VARCHAR},
+      </if>
+      <if test="certificateNumber != null">
+        certificate_number = #{certificateNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        gender = #{gender,jdbcType=CHAR},
+      </if>
+      <if test="birthday != null">
+        birthday = #{birthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="maritalStatus != null">
+        marital_status = #{maritalStatus,jdbcType=CHAR},
+      </if>
+      <if test="hasChildren != null">
+        has_children = #{hasChildren,jdbcType=CHAR},
+      </if>
+      <if test="mobilePhoneNumber != null">
+        mobile_phone_number = #{mobilePhoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="censusRegisterSeatDetail != null">
+        census_register_seat_detail = #{censusRegisterSeatDetail,jdbcType=VARCHAR},
+      </if>
+      <if test="censusRegisterSeatCounties != null">
+        census_register_seat_counties = #{censusRegisterSeatCounties,jdbcType=VARCHAR},
+      </if>
+      <if test="censusRegisterType != null">
+        census_register_type = #{censusRegisterType,jdbcType=VARCHAR},
+      </if>
+      <if test="ftelephone != null">
+        ftelephone = #{ftelephone,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="otherContactInformation != null">
+        other_contact_information = #{otherContactInformation,jdbcType=VARCHAR},
+      </if>
+      <if test="otherContactInformationValue != null">
+        other_contact_information_value = #{otherContactInformationValue,jdbcType=VARCHAR},
+      </if>
+      <if test="currentlyCheckinTime != null">
+        currently_checkin_time = #{currentlyCheckinTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="correspondenceCounties != null">
+        correspondence_counties = #{correspondenceCounties,jdbcType=VARCHAR},
+      </if>
+      <if test="correspondenceDetailAddress != null">
+        correspondence_detail_address = #{correspondenceDetailAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="communicationsCode != null">
+        communications_code = #{communicationsCode,jdbcType=VARCHAR},
+      </if>
+      <if test="workUnits != null">
+        work_units = #{workUnits,jdbcType=VARCHAR},
+      </if>
+      <if test="unitType != null">
+        unit_type = #{unitType,jdbcType=CHAR},
+      </if>
+      <if test="professionalTypes != null">
+        professional_types = #{professionalTypes,jdbcType=CHAR},
+      </if>
+      <if test="unitCounties != null">
+        unit_counties = #{unitCounties,jdbcType=VARCHAR},
+      </if>
+      <if test="unitAddress != null">
+        unit_address = #{unitAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="unitPhone != null">
+        unit_phone = #{unitPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="inTime != null">
+        in_time = #{inTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="position != null">
+        position = #{position,jdbcType=VARCHAR},
+      </if>
+      <if test="workTitle != null">
+        work_title = #{workTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="highestRecordFormal != null">
+        highest_record_formal = #{highestRecordFormal,jdbcType=VARCHAR},
+      </if>
+      <if test="education != null">
+        education = #{education,jdbcType=VARCHAR},
+      </if>
+      <if test="certificate != null">
+        certificate = #{certificate,jdbcType=VARCHAR},
+      </if>
+      <if test="nowHousingArea != null">
+        now_housing_area = #{nowHousingArea,jdbcType=VARCHAR},
+      </if>
+      <if test="housingType != null">
+        housing_type = #{housingType,jdbcType=VARCHAR},
+      </if>
+      <if test="hasCar != null">
+        has_car = #{hasCar,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleFlatcard != null">
+        vehicle_flatcard = #{vehicleFlatcard,jdbcType=VARCHAR},
+      </if>
+      <if test="personalMonthlyIncome != null">
+        personal_monthly_income = #{personalMonthlyIncome,jdbcType=DECIMAL},
+      </if>
+      <if test="personalIncome != null">
+        personal_income = #{personalIncome,jdbcType=DECIMAL},
+      </if>
+      <if test="naturalPersonType != null">
+        natural_person_type = #{naturalPersonType,jdbcType=VARCHAR},
+      </if>
+      <if test="clientAreaType != null">
+        client_area_type = #{clientAreaType,jdbcType=VARCHAR},
+      </if>
+      <if test="groupStaff != null">
+        group_staff = #{groupStaff,jdbcType=VARCHAR},
+      </if>
+      <if test="comprehensiveImpression != null">
+        comprehensive_impression = #{comprehensiveImpression,jdbcType=VARCHAR},
+      </if>
+      <if test="customerSource != null">
+        customer_source = #{customerSource,jdbcType=VARCHAR},
+      </if>
+      <if test="added != null">
+        added = #{added,jdbcType=VARCHAR},
+      </if>
+      <if test="familyAssets != null">
+        family_assets = #{familyAssets,jdbcType=DECIMAL},
+      </if>
+      <if test="monthLiabilities != null">
+        month_liabilities = #{monthLiabilities,jdbcType=DECIMAL},
+      </if>
+      <if test="totalLiabilities != null">
+        total_liabilities = #{totalLiabilities,jdbcType=DECIMAL},
+      </if>
+      <if test="censusRegisterSeat != null">
+        census_register_seat = #{censusRegisterSeat,jdbcType=VARCHAR},
+      </if>
+      <if test="merchantName != null">
+        merchant_name = #{merchantName,jdbcType=VARCHAR},
+      </if>
+      <if test="businessScope != null">
+        business_scope = #{businessScope,jdbcType=VARCHAR},
+      </if>
+      <if test="businessOperator != null">
+        business_operator = #{businessOperator,jdbcType=VARCHAR},
+      </if>
+      <if test="stockholderNum != null">
+        stockholder_num = #{stockholderNum,jdbcType=INTEGER},
+      </if>
+      <if test="operateAddr != null">
+        operate_addr = #{operateAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeNum != null">
+        employee_num = #{employeeNum,jdbcType=INTEGER},
+      </if>
+      <if test="organizeStyle != null">
+        organize_style = #{organizeStyle,jdbcType=VARCHAR},
+      </if>
+      <if test="operateStartTime != null">
+        operate_start_time = #{operateStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="businessProduction != null">
+        business_production = #{businessProduction,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null">
+        area = #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="detailDesc != null">
+        detail_desc = #{detailDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="monthlySales != null">
+        monthly_sales = #{monthlySales,jdbcType=VARCHAR},
+      </if>
+      <if test="grossProfitMarginRate != null">
+        gross_profit_margin_rate = #{grossProfitMarginRate,jdbcType=DECIMAL},
+      </if>
+      <if test="netIncomeRate != null">
+        net_income_rate = #{netIncomeRate,jdbcType=DECIMAL},
+      </if>
+      <if test="familyMonthlyExpenses != null">
+        family_monthly_expenses = #{familyMonthlyExpenses,jdbcType=DECIMAL},
+      </if>
+      <if test="currentInventory != null">
+        current_inventory = #{currentInventory,jdbcType=DECIMAL},
+      </if>
+      <if test="accountsReceivable != null">
+        accounts_receivable = #{accountsReceivable,jdbcType=DECIMAL},
+      </if>
+      <if test="accountsPayable != null">
+        accounts_payable = #{accountsPayable,jdbcType=DECIMAL},
+      </if>
+      <if test="otherRevenue != null">
+        other_revenue = #{otherRevenue,jdbcType=VARCHAR},
+      </if>
+      <if test="nation != null">
+        nation = #{nation,jdbcType=VARCHAR},
+      </if>
+      <if test="workTime != null">
+        work_time = #{workTime,jdbcType=VARCHAR},
+      </if>
+      <if test="contacts1 != null">
+        contacts1 = #{contacts1,jdbcType=VARCHAR},
+      </if>
+      <if test="contacts2 != null">
+        contacts2 = #{contacts2,jdbcType=VARCHAR},
+      </if>
+      <if test="contacts3 != null">
+        contacts3 = #{contacts3,jdbcType=VARCHAR},
+      </if>
+      <if test="contactsTel1 != null">
+        contacts_tel1 = #{contactsTel1,jdbcType=VARCHAR},
+      </if>
+      <if test="contactsTel2 != null">
+        contacts_tel2 = #{contactsTel2,jdbcType=VARCHAR},
+      </if>
+      <if test="contactsTel3 != null">
+        contacts_tel3 = #{contactsTel3,jdbcType=VARCHAR},
+      </if>
+      <if test="contactsRelation1 != null">
+        contacts_relation1 = #{contactsRelation1,jdbcType=VARCHAR},
+      </if>
+      <if test="contactsRelation2 != null">
+        contacts_relation2 = #{contactsRelation2,jdbcType=VARCHAR},
+      </if>
+      <if test="contactsRelation3 != null">
+        contacts_relation3 = #{contactsRelation3,jdbcType=VARCHAR},
+      </if>
+      <if test="loanUse != null">
+        loan_use = #{loanUse,jdbcType=VARCHAR},
+      </if>
+      <if test="annex1 != null">
+        annex1 = #{annex1,jdbcType=VARCHAR},
+      </if>
+      <if test="annex2 != null">
+        annex2 = #{annex2,jdbcType=VARCHAR},
+      </if>
+      <if test="annex3 != null">
+        annex3 = #{annex3,jdbcType=VARCHAR},
+      </if>
+      <if test="annex4 != null">
+        annex4 = #{annex4,jdbcType=VARCHAR},
+      </if>
+      <if test="annex5 != null">
+        annex5 = #{annex5,jdbcType=VARCHAR},
+      </if>
+      <if test="annex6 != null">
+        annex6 = #{annex6,jdbcType=VARCHAR},
+      </if>
+      <if test="annex7 != null">
+        annex7 = #{annex7,jdbcType=VARCHAR},
+      </if>
+      <if test="annex8 != null">
+        annex8 = #{annex8,jdbcType=VARCHAR},
+      </if>
+      <if test="annex9 != null">
+        annex9 = #{annex9,jdbcType=VARCHAR},
+      </if>
+      <if test="annex10 != null">
+        annex10 = #{annex10,jdbcType=VARCHAR},
+      </if>
+      <if test="delFlag != null">
+        del_flag = #{delFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="yjAgeLimit != null">
+        yj_age_limit = #{yjAgeLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="relationAdress != null">
+        relation_adress = #{relationAdress,jdbcType=VARCHAR},
+      </if>
+      <if test="houseNum != null">
+        house_num = #{houseNum,jdbcType=INTEGER},
+      </if>
+      <if test="carNum != null">
+        car_num = #{carNum,jdbcType=INTEGER},
+      </if>
+      <if test="bankLoanAmount != null">
+        bank_loan_amount = #{bankLoanAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="otherLiabilitiesAccount != null">
+        other_liabilities_account = #{otherLiabilitiesAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="customerName != null">
+        customer_name = #{customerName,jdbcType=VARCHAR},
+      </if>
+      <if test="customerNumber != null">
+        customer_number = #{customerNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="referred != null">
+        referred = #{referred,jdbcType=VARCHAR},
+      </if>
+      <if test="enterpriseType != null">
+        enterprise_type = #{enterpriseType,jdbcType=CHAR},
+      </if>
+      <if test="currency != null">
+        currency = #{currency,jdbcType=VARCHAR},
+      </if>
+      <if test="legalRepresentative != null">
+        legal_representative = #{legalRepresentative,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonCertificatNumber != null">
+        legal_person_certificat_number = #{legalPersonCertificatNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonPosition != null">
+        legal_person_position = #{legalPersonPosition,jdbcType=VARCHAR},
+      </if>
+      <if test="registrationTime != null">
+        registration_time = #{registrationTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="registeredCapital != null">
+        registered_capital = #{registeredCapital,jdbcType=DECIMAL},
+      </if>
+      <if test="actuallyRealizedCapital != null">
+        actually_realized_capital = #{actuallyRealizedCapital,jdbcType=DECIMAL},
+      </if>
+      <if test="certificateType != null">
+        certificate_type = #{certificateType,jdbcType=CHAR},
+      </if>
+      <if test="businessLicenseEffectiveStartDate != null">
+        business_license_effective_start_date = #{businessLicenseEffectiveStartDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="businessLicenseEffectiveEndDate != null">
+        business_license_effective_end_date = #{businessLicenseEffectiveEndDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="latestAnnualInspection != null">
+        latest_annual_inspection = #{latestAnnualInspection,jdbcType=TIMESTAMP},
+      </if>
+      <if test="businessPeriod != null">
+        business_period = #{businessPeriod,jdbcType=TIMESTAMP},
+      </if>
+      <if test="businessPeriodEnd != null">
+        business_period_end = #{businessPeriodEnd,jdbcType=VARCHAR},
+      </if>
+      <if test="companiesNumber != null">
+        companies_number = #{companiesNumber,jdbcType=INTEGER},
+      </if>
+      <if test="creditCardNumber != null">
+        credit_card_number = #{creditCardNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="tissueTypes != null">
+        tissue_types = #{tissueTypes,jdbcType=VARCHAR},
+      </if>
+      <if test="subordinateIndustry != null">
+        subordinate_industry = #{subordinateIndustry,jdbcType=VARCHAR},
+      </if>
+      <if test="belongstoProvincesCities != null">
+        belongsto_provinces_cities = #{belongstoProvincesCities,jdbcType=VARCHAR},
+      </if>
+      <if test="actualControllers != null">
+        actual_controllers = #{actualControllers,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneNumber != null">
+        phone_number = #{phoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="faxNumber != null">
+        fax_number = #{faxNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="contact != null">
+        contact = #{contact,jdbcType=VARCHAR},
+      </if>
+      <if test="contactPhoneNumber != null">
+        contact_phone_number = #{contactPhoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="registeredAddressCities != null">
+        registered_address_cities = #{registeredAddressCities,jdbcType=VARCHAR},
+      </if>
+      <if test="registeredZipCode != null">
+        registered_zip_code = #{registeredZipCode,jdbcType=VARCHAR},
+      </if>
+      <if test="mainBusinessScope != null">
+        main_business_scope = #{mainBusinessScope,jdbcType=VARCHAR},
+      </if>
+      <if test="businessAddressCounties != null">
+        business_address_counties = #{businessAddressCounties,jdbcType=VARCHAR},
+      </if>
+      <if test="localZipCode != null">
+        local_zip_code = #{localZipCode,jdbcType=VARCHAR},
+      </if>
+      <if test="organizationCode != null">
+        organization_code = #{organizationCode,jdbcType=VARCHAR},
+      </if>
+      <if test="businessLicenseNumber != null">
+        business_license_number = #{businessLicenseNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseBirthday != null">
+        spouse_birthday = #{spouseBirthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="spouseName != null">
+        spouse_name = #{spouseName,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseGender != null">
+        spouse_gender = #{spouseGender,jdbcType=CHAR},
+      </if>
+      <if test="spouseDocumentType != null">
+        spouse_document_type = #{spouseDocumentType,jdbcType=CHAR},
+      </if>
+      <if test="spouseIdNumber != null">
+        spouse_id_number = #{spouseIdNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseMobilePhone != null">
+        spouse_mobile_phone = #{spouseMobilePhone,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseUnitCode != null">
+        spouse_unit_code = #{spouseUnitCode,jdbcType=VARCHAR},
+      </if>
+      <if test="lastYearNetProfit != null">
+        last_year_net_profit = #{lastYearNetProfit,jdbcType=DECIMAL},
+      </if>
+      <if test="lastYearTotalAssets != null">
+        last_year_total_assets = #{lastYearTotalAssets,jdbcType=DECIMAL},
+      </if>
+      <if test="lastYearNetWorth != null">
+        last_year_net_worth = #{lastYearNetWorth,jdbcType=DECIMAL},
+      </if>
+      <if test="lastYearTotalLiabilities != null">
+        last_year_total_liabilities = #{lastYearTotalLiabilities,jdbcType=DECIMAL},
+      </if>
+      <if test="enterpriseMonthlyDebt != null">
+        enterprise_monthly_debt = #{enterpriseMonthlyDebt,jdbcType=DECIMAL},
+      </if>
+      <if test="recentTotalLiabilities != null">
+        recent_total_liabilities = #{recentTotalLiabilities,jdbcType=DECIMAL},
+      </if>
+      <if test="recentBankLoanBalance != null">
+        recent_bank_loan_balance = #{recentBankLoanBalance,jdbcType=DECIMAL},
+      </if>
+      <if test="recentTotalAssets != null">
+        recent_total_assets = #{recentTotalAssets,jdbcType=DECIMAL},
+      </if>
+      <if test="recentGuaranteeAssets != null">
+        recent_guarantee_assets = #{recentGuaranteeAssets,jdbcType=DECIMAL},
+      </if>
+      <if test="recentEconomicLitigationCosts != null">
+        recent_economic_litigation_costs = #{recentEconomicLitigationCosts,jdbcType=DECIMAL},
+      </if>
+      <if test="recentNotBankLoanBalance != null">
+        recent_not_bank_loan_balance = #{recentNotBankLoanBalance,jdbcType=DECIMAL},
+      </if>
+      <if test="currentYearTotalProfits != null">
+        current_year_total_profits = #{currentYearTotalProfits,jdbcType=DECIMAL},
+      </if>
+      <if test="currentYearTotalIncome != null">
+        current_year_total_income = #{currentYearTotalIncome,jdbcType=DECIMAL},
+      </if>
+      <if test="enterpriseOverview1 != null">
+        enterprise_overview1 = #{enterpriseOverview1,jdbcType=VARCHAR},
+      </if>
+      <if test="enterpriseOverview2 != null">
+        enterprise_overview2 = #{enterpriseOverview2,jdbcType=VARCHAR},
+      </if>
+      <if test="customerSize != null">
+        customer_size = #{customerSize,jdbcType=VARCHAR},
+      </if>
+      <if test="smallBusinessLogo != null">
+        small_business_logo = #{smallBusinessLogo,jdbcType=VARCHAR},
+      </if>
+      <if test="groupClientsLogo != null">
+        group_clients_logo = #{groupClientsLogo,jdbcType=VARCHAR},
+      </if>
+      <if test="customerManager != null">
+        customer_manager = #{customerManager,jdbcType=VARCHAR},
+      </if>
+      <if test="inputUser != null">
+        input_user = #{inputUser,jdbcType=VARCHAR},
+      </if>
+      <if test="picture != null">
+        picture = #{picture,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where project_id = #{projectId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.ecps.seckill.pojo.BizProjectDetail">
+    update biz_project_detail
+    set id = #{id,jdbcType=VARCHAR},
+      former_name = #{formerName,jdbcType=VARCHAR},
+      certificate_number = #{certificateNumber,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=CHAR},
+      birthday = #{birthday,jdbcType=TIMESTAMP},
+      marital_status = #{maritalStatus,jdbcType=CHAR},
+      has_children = #{hasChildren,jdbcType=CHAR},
+      mobile_phone_number = #{mobilePhoneNumber,jdbcType=VARCHAR},
+      census_register_seat_detail = #{censusRegisterSeatDetail,jdbcType=VARCHAR},
+      census_register_seat_counties = #{censusRegisterSeatCounties,jdbcType=VARCHAR},
+      census_register_type = #{censusRegisterType,jdbcType=VARCHAR},
+      ftelephone = #{ftelephone,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      other_contact_information = #{otherContactInformation,jdbcType=VARCHAR},
+      other_contact_information_value = #{otherContactInformationValue,jdbcType=VARCHAR},
+      currently_checkin_time = #{currentlyCheckinTime,jdbcType=TIMESTAMP},
+      correspondence_counties = #{correspondenceCounties,jdbcType=VARCHAR},
+      correspondence_detail_address = #{correspondenceDetailAddress,jdbcType=VARCHAR},
+      communications_code = #{communicationsCode,jdbcType=VARCHAR},
+      work_units = #{workUnits,jdbcType=VARCHAR},
+      unit_type = #{unitType,jdbcType=CHAR},
+      professional_types = #{professionalTypes,jdbcType=CHAR},
+      unit_counties = #{unitCounties,jdbcType=VARCHAR},
+      unit_address = #{unitAddress,jdbcType=VARCHAR},
+      unit_phone = #{unitPhone,jdbcType=VARCHAR},
+      in_time = #{inTime,jdbcType=TIMESTAMP},
+      position = #{position,jdbcType=VARCHAR},
+      work_title = #{workTitle,jdbcType=VARCHAR},
+      highest_record_formal = #{highestRecordFormal,jdbcType=VARCHAR},
+      education = #{education,jdbcType=VARCHAR},
+      certificate = #{certificate,jdbcType=VARCHAR},
+      now_housing_area = #{nowHousingArea,jdbcType=VARCHAR},
+      housing_type = #{housingType,jdbcType=VARCHAR},
+      has_car = #{hasCar,jdbcType=VARCHAR},
+      vehicle_flatcard = #{vehicleFlatcard,jdbcType=VARCHAR},
+      personal_monthly_income = #{personalMonthlyIncome,jdbcType=DECIMAL},
+      personal_income = #{personalIncome,jdbcType=DECIMAL},
+      natural_person_type = #{naturalPersonType,jdbcType=VARCHAR},
+      client_area_type = #{clientAreaType,jdbcType=VARCHAR},
+      group_staff = #{groupStaff,jdbcType=VARCHAR},
+      comprehensive_impression = #{comprehensiveImpression,jdbcType=VARCHAR},
+      customer_source = #{customerSource,jdbcType=VARCHAR},
+      added = #{added,jdbcType=VARCHAR},
+      family_assets = #{familyAssets,jdbcType=DECIMAL},
+      month_liabilities = #{monthLiabilities,jdbcType=DECIMAL},
+      total_liabilities = #{totalLiabilities,jdbcType=DECIMAL},
+      census_register_seat = #{censusRegisterSeat,jdbcType=VARCHAR},
+      merchant_name = #{merchantName,jdbcType=VARCHAR},
+      business_scope = #{businessScope,jdbcType=VARCHAR},
+      business_operator = #{businessOperator,jdbcType=VARCHAR},
+      stockholder_num = #{stockholderNum,jdbcType=INTEGER},
+      operate_addr = #{operateAddr,jdbcType=VARCHAR},
+      employee_num = #{employeeNum,jdbcType=INTEGER},
+      organize_style = #{organizeStyle,jdbcType=VARCHAR},
+      operate_start_time = #{operateStartTime,jdbcType=TIMESTAMP},
+      business_production = #{businessProduction,jdbcType=VARCHAR},
+      area = #{area,jdbcType=VARCHAR},
+      detail_desc = #{detailDesc,jdbcType=VARCHAR},
+      monthly_sales = #{monthlySales,jdbcType=VARCHAR},
+      gross_profit_margin_rate = #{grossProfitMarginRate,jdbcType=DECIMAL},
+      net_income_rate = #{netIncomeRate,jdbcType=DECIMAL},
+      family_monthly_expenses = #{familyMonthlyExpenses,jdbcType=DECIMAL},
+      current_inventory = #{currentInventory,jdbcType=DECIMAL},
+      accounts_receivable = #{accountsReceivable,jdbcType=DECIMAL},
+      accounts_payable = #{accountsPayable,jdbcType=DECIMAL},
+      other_revenue = #{otherRevenue,jdbcType=VARCHAR},
+      nation = #{nation,jdbcType=VARCHAR},
+      work_time = #{workTime,jdbcType=VARCHAR},
+      contacts1 = #{contacts1,jdbcType=VARCHAR},
+      contacts2 = #{contacts2,jdbcType=VARCHAR},
+      contacts3 = #{contacts3,jdbcType=VARCHAR},
+      contacts_tel1 = #{contactsTel1,jdbcType=VARCHAR},
+      contacts_tel2 = #{contactsTel2,jdbcType=VARCHAR},
+      contacts_tel3 = #{contactsTel3,jdbcType=VARCHAR},
+      contacts_relation1 = #{contactsRelation1,jdbcType=VARCHAR},
+      contacts_relation2 = #{contactsRelation2,jdbcType=VARCHAR},
+      contacts_relation3 = #{contactsRelation3,jdbcType=VARCHAR},
+      loan_use = #{loanUse,jdbcType=VARCHAR},
+      annex1 = #{annex1,jdbcType=VARCHAR},
+      annex2 = #{annex2,jdbcType=VARCHAR},
+      annex3 = #{annex3,jdbcType=VARCHAR},
+      annex4 = #{annex4,jdbcType=VARCHAR},
+      annex5 = #{annex5,jdbcType=VARCHAR},
+      annex6 = #{annex6,jdbcType=VARCHAR},
+      annex7 = #{annex7,jdbcType=VARCHAR},
+      annex8 = #{annex8,jdbcType=VARCHAR},
+      annex9 = #{annex9,jdbcType=VARCHAR},
+      annex10 = #{annex10,jdbcType=VARCHAR},
+      del_flag = #{delFlag,jdbcType=VARCHAR},
+      yj_age_limit = #{yjAgeLimit,jdbcType=VARCHAR},
+      relation_adress = #{relationAdress,jdbcType=VARCHAR},
+      house_num = #{houseNum,jdbcType=INTEGER},
+      car_num = #{carNum,jdbcType=INTEGER},
+      bank_loan_amount = #{bankLoanAmount,jdbcType=VARCHAR},
+      other_liabilities_account = #{otherLiabilitiesAccount,jdbcType=VARCHAR},
+      customer_name = #{customerName,jdbcType=VARCHAR},
+      customer_number = #{customerNumber,jdbcType=VARCHAR},
+      referred = #{referred,jdbcType=VARCHAR},
+      enterprise_type = #{enterpriseType,jdbcType=CHAR},
+      currency = #{currency,jdbcType=VARCHAR},
+      legal_representative = #{legalRepresentative,jdbcType=VARCHAR},
+      legal_person_certificat_number = #{legalPersonCertificatNumber,jdbcType=VARCHAR},
+      legal_person_position = #{legalPersonPosition,jdbcType=VARCHAR},
+      registration_time = #{registrationTime,jdbcType=TIMESTAMP},
+      registered_capital = #{registeredCapital,jdbcType=DECIMAL},
+      actually_realized_capital = #{actuallyRealizedCapital,jdbcType=DECIMAL},
+      certificate_type = #{certificateType,jdbcType=CHAR},
+      business_license_effective_start_date = #{businessLicenseEffectiveStartDate,jdbcType=TIMESTAMP},
+      business_license_effective_end_date = #{businessLicenseEffectiveEndDate,jdbcType=TIMESTAMP},
+      latest_annual_inspection = #{latestAnnualInspection,jdbcType=TIMESTAMP},
+      business_period = #{businessPeriod,jdbcType=TIMESTAMP},
+      business_period_end = #{businessPeriodEnd,jdbcType=VARCHAR},
+      companies_number = #{companiesNumber,jdbcType=INTEGER},
+      credit_card_number = #{creditCardNumber,jdbcType=VARCHAR},
+      tissue_types = #{tissueTypes,jdbcType=VARCHAR},
+      subordinate_industry = #{subordinateIndustry,jdbcType=VARCHAR},
+      belongsto_provinces_cities = #{belongstoProvincesCities,jdbcType=VARCHAR},
+      actual_controllers = #{actualControllers,jdbcType=VARCHAR},
+      phone_number = #{phoneNumber,jdbcType=VARCHAR},
+      fax_number = #{faxNumber,jdbcType=VARCHAR},
+      contact = #{contact,jdbcType=VARCHAR},
+      contact_phone_number = #{contactPhoneNumber,jdbcType=VARCHAR},
+      registered_address_cities = #{registeredAddressCities,jdbcType=VARCHAR},
+      registered_zip_code = #{registeredZipCode,jdbcType=VARCHAR},
+      main_business_scope = #{mainBusinessScope,jdbcType=VARCHAR},
+      business_address_counties = #{businessAddressCounties,jdbcType=VARCHAR},
+      local_zip_code = #{localZipCode,jdbcType=VARCHAR},
+      organization_code = #{organizationCode,jdbcType=VARCHAR},
+      business_license_number = #{businessLicenseNumber,jdbcType=VARCHAR},
+      spouse_birthday = #{spouseBirthday,jdbcType=TIMESTAMP},
+      spouse_name = #{spouseName,jdbcType=VARCHAR},
+      spouse_gender = #{spouseGender,jdbcType=CHAR},
+      spouse_document_type = #{spouseDocumentType,jdbcType=CHAR},
+      spouse_id_number = #{spouseIdNumber,jdbcType=VARCHAR},
+      spouse_mobile_phone = #{spouseMobilePhone,jdbcType=VARCHAR},
+      spouse_unit_code = #{spouseUnitCode,jdbcType=VARCHAR},
+      last_year_net_profit = #{lastYearNetProfit,jdbcType=DECIMAL},
+      last_year_total_assets = #{lastYearTotalAssets,jdbcType=DECIMAL},
+      last_year_net_worth = #{lastYearNetWorth,jdbcType=DECIMAL},
+      last_year_total_liabilities = #{lastYearTotalLiabilities,jdbcType=DECIMAL},
+      enterprise_monthly_debt = #{enterpriseMonthlyDebt,jdbcType=DECIMAL},
+      recent_total_liabilities = #{recentTotalLiabilities,jdbcType=DECIMAL},
+      recent_bank_loan_balance = #{recentBankLoanBalance,jdbcType=DECIMAL},
+      recent_total_assets = #{recentTotalAssets,jdbcType=DECIMAL},
+      recent_guarantee_assets = #{recentGuaranteeAssets,jdbcType=DECIMAL},
+      recent_economic_litigation_costs = #{recentEconomicLitigationCosts,jdbcType=DECIMAL},
+      recent_not_bank_loan_balance = #{recentNotBankLoanBalance,jdbcType=DECIMAL},
+      current_year_total_profits = #{currentYearTotalProfits,jdbcType=DECIMAL},
+      current_year_total_income = #{currentYearTotalIncome,jdbcType=DECIMAL},
+      enterprise_overview1 = #{enterpriseOverview1,jdbcType=VARCHAR},
+      enterprise_overview2 = #{enterpriseOverview2,jdbcType=VARCHAR},
+      customer_size = #{customerSize,jdbcType=VARCHAR},
+      small_business_logo = #{smallBusinessLogo,jdbcType=VARCHAR},
+      group_clients_logo = #{groupClientsLogo,jdbcType=VARCHAR},
+      customer_manager = #{customerManager,jdbcType=VARCHAR},
+      input_user = #{inputUser,jdbcType=VARCHAR},
+      picture = #{picture,jdbcType=LONGVARCHAR}
+    where project_id = #{projectId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ecps.seckill.pojo.BizProjectDetail">
+    update biz_project_detail
+    set id = #{id,jdbcType=VARCHAR},
+      former_name = #{formerName,jdbcType=VARCHAR},
+      certificate_number = #{certificateNumber,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=CHAR},
+      birthday = #{birthday,jdbcType=TIMESTAMP},
+      marital_status = #{maritalStatus,jdbcType=CHAR},
+      has_children = #{hasChildren,jdbcType=CHAR},
+      mobile_phone_number = #{mobilePhoneNumber,jdbcType=VARCHAR},
+      census_register_seat_detail = #{censusRegisterSeatDetail,jdbcType=VARCHAR},
+      census_register_seat_counties = #{censusRegisterSeatCounties,jdbcType=VARCHAR},
+      census_register_type = #{censusRegisterType,jdbcType=VARCHAR},
+      ftelephone = #{ftelephone,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      other_contact_information = #{otherContactInformation,jdbcType=VARCHAR},
+      other_contact_information_value = #{otherContactInformationValue,jdbcType=VARCHAR},
+      currently_checkin_time = #{currentlyCheckinTime,jdbcType=TIMESTAMP},
+      correspondence_counties = #{correspondenceCounties,jdbcType=VARCHAR},
+      correspondence_detail_address = #{correspondenceDetailAddress,jdbcType=VARCHAR},
+      communications_code = #{communicationsCode,jdbcType=VARCHAR},
+      work_units = #{workUnits,jdbcType=VARCHAR},
+      unit_type = #{unitType,jdbcType=CHAR},
+      professional_types = #{professionalTypes,jdbcType=CHAR},
+      unit_counties = #{unitCounties,jdbcType=VARCHAR},
+      unit_address = #{unitAddress,jdbcType=VARCHAR},
+      unit_phone = #{unitPhone,jdbcType=VARCHAR},
+      in_time = #{inTime,jdbcType=TIMESTAMP},
+      position = #{position,jdbcType=VARCHAR},
+      work_title = #{workTitle,jdbcType=VARCHAR},
+      highest_record_formal = #{highestRecordFormal,jdbcType=VARCHAR},
+      education = #{education,jdbcType=VARCHAR},
+      certificate = #{certificate,jdbcType=VARCHAR},
+      now_housing_area = #{nowHousingArea,jdbcType=VARCHAR},
+      housing_type = #{housingType,jdbcType=VARCHAR},
+      has_car = #{hasCar,jdbcType=VARCHAR},
+      vehicle_flatcard = #{vehicleFlatcard,jdbcType=VARCHAR},
+      personal_monthly_income = #{personalMonthlyIncome,jdbcType=DECIMAL},
+      personal_income = #{personalIncome,jdbcType=DECIMAL},
+      natural_person_type = #{naturalPersonType,jdbcType=VARCHAR},
+      client_area_type = #{clientAreaType,jdbcType=VARCHAR},
+      group_staff = #{groupStaff,jdbcType=VARCHAR},
+      comprehensive_impression = #{comprehensiveImpression,jdbcType=VARCHAR},
+      customer_source = #{customerSource,jdbcType=VARCHAR},
+      added = #{added,jdbcType=VARCHAR},
+      family_assets = #{familyAssets,jdbcType=DECIMAL},
+      month_liabilities = #{monthLiabilities,jdbcType=DECIMAL},
+      total_liabilities = #{totalLiabilities,jdbcType=DECIMAL},
+      census_register_seat = #{censusRegisterSeat,jdbcType=VARCHAR},
+      merchant_name = #{merchantName,jdbcType=VARCHAR},
+      business_scope = #{businessScope,jdbcType=VARCHAR},
+      business_operator = #{businessOperator,jdbcType=VARCHAR},
+      stockholder_num = #{stockholderNum,jdbcType=INTEGER},
+      operate_addr = #{operateAddr,jdbcType=VARCHAR},
+      employee_num = #{employeeNum,jdbcType=INTEGER},
+      organize_style = #{organizeStyle,jdbcType=VARCHAR},
+      operate_start_time = #{operateStartTime,jdbcType=TIMESTAMP},
+      business_production = #{businessProduction,jdbcType=VARCHAR},
+      area = #{area,jdbcType=VARCHAR},
+      detail_desc = #{detailDesc,jdbcType=VARCHAR},
+      monthly_sales = #{monthlySales,jdbcType=VARCHAR},
+      gross_profit_margin_rate = #{grossProfitMarginRate,jdbcType=DECIMAL},
+      net_income_rate = #{netIncomeRate,jdbcType=DECIMAL},
+      family_monthly_expenses = #{familyMonthlyExpenses,jdbcType=DECIMAL},
+      current_inventory = #{currentInventory,jdbcType=DECIMAL},
+      accounts_receivable = #{accountsReceivable,jdbcType=DECIMAL},
+      accounts_payable = #{accountsPayable,jdbcType=DECIMAL},
+      other_revenue = #{otherRevenue,jdbcType=VARCHAR},
+      nation = #{nation,jdbcType=VARCHAR},
+      work_time = #{workTime,jdbcType=VARCHAR},
+      contacts1 = #{contacts1,jdbcType=VARCHAR},
+      contacts2 = #{contacts2,jdbcType=VARCHAR},
+      contacts3 = #{contacts3,jdbcType=VARCHAR},
+      contacts_tel1 = #{contactsTel1,jdbcType=VARCHAR},
+      contacts_tel2 = #{contactsTel2,jdbcType=VARCHAR},
+      contacts_tel3 = #{contactsTel3,jdbcType=VARCHAR},
+      contacts_relation1 = #{contactsRelation1,jdbcType=VARCHAR},
+      contacts_relation2 = #{contactsRelation2,jdbcType=VARCHAR},
+      contacts_relation3 = #{contactsRelation3,jdbcType=VARCHAR},
+      loan_use = #{loanUse,jdbcType=VARCHAR},
+      annex1 = #{annex1,jdbcType=VARCHAR},
+      annex2 = #{annex2,jdbcType=VARCHAR},
+      annex3 = #{annex3,jdbcType=VARCHAR},
+      annex4 = #{annex4,jdbcType=VARCHAR},
+      annex5 = #{annex5,jdbcType=VARCHAR},
+      annex6 = #{annex6,jdbcType=VARCHAR},
+      annex7 = #{annex7,jdbcType=VARCHAR},
+      annex8 = #{annex8,jdbcType=VARCHAR},
+      annex9 = #{annex9,jdbcType=VARCHAR},
+      annex10 = #{annex10,jdbcType=VARCHAR},
+      del_flag = #{delFlag,jdbcType=VARCHAR},
+      yj_age_limit = #{yjAgeLimit,jdbcType=VARCHAR},
+      relation_adress = #{relationAdress,jdbcType=VARCHAR},
+      house_num = #{houseNum,jdbcType=INTEGER},
+      car_num = #{carNum,jdbcType=INTEGER},
+      bank_loan_amount = #{bankLoanAmount,jdbcType=VARCHAR},
+      other_liabilities_account = #{otherLiabilitiesAccount,jdbcType=VARCHAR},
+      customer_name = #{customerName,jdbcType=VARCHAR},
+      customer_number = #{customerNumber,jdbcType=VARCHAR},
+      referred = #{referred,jdbcType=VARCHAR},
+      enterprise_type = #{enterpriseType,jdbcType=CHAR},
+      currency = #{currency,jdbcType=VARCHAR},
+      legal_representative = #{legalRepresentative,jdbcType=VARCHAR},
+      legal_person_certificat_number = #{legalPersonCertificatNumber,jdbcType=VARCHAR},
+      legal_person_position = #{legalPersonPosition,jdbcType=VARCHAR},
+      registration_time = #{registrationTime,jdbcType=TIMESTAMP},
+      registered_capital = #{registeredCapital,jdbcType=DECIMAL},
+      actually_realized_capital = #{actuallyRealizedCapital,jdbcType=DECIMAL},
+      certificate_type = #{certificateType,jdbcType=CHAR},
+      business_license_effective_start_date = #{businessLicenseEffectiveStartDate,jdbcType=TIMESTAMP},
+      business_license_effective_end_date = #{businessLicenseEffectiveEndDate,jdbcType=TIMESTAMP},
+      latest_annual_inspection = #{latestAnnualInspection,jdbcType=TIMESTAMP},
+      business_period = #{businessPeriod,jdbcType=TIMESTAMP},
+      business_period_end = #{businessPeriodEnd,jdbcType=VARCHAR},
+      companies_number = #{companiesNumber,jdbcType=INTEGER},
+      credit_card_number = #{creditCardNumber,jdbcType=VARCHAR},
+      tissue_types = #{tissueTypes,jdbcType=VARCHAR},
+      subordinate_industry = #{subordinateIndustry,jdbcType=VARCHAR},
+      belongsto_provinces_cities = #{belongstoProvincesCities,jdbcType=VARCHAR},
+      actual_controllers = #{actualControllers,jdbcType=VARCHAR},
+      phone_number = #{phoneNumber,jdbcType=VARCHAR},
+      fax_number = #{faxNumber,jdbcType=VARCHAR},
+      contact = #{contact,jdbcType=VARCHAR},
+      contact_phone_number = #{contactPhoneNumber,jdbcType=VARCHAR},
+      registered_address_cities = #{registeredAddressCities,jdbcType=VARCHAR},
+      registered_zip_code = #{registeredZipCode,jdbcType=VARCHAR},
+      main_business_scope = #{mainBusinessScope,jdbcType=VARCHAR},
+      business_address_counties = #{businessAddressCounties,jdbcType=VARCHAR},
+      local_zip_code = #{localZipCode,jdbcType=VARCHAR},
+      organization_code = #{organizationCode,jdbcType=VARCHAR},
+      business_license_number = #{businessLicenseNumber,jdbcType=VARCHAR},
+      spouse_birthday = #{spouseBirthday,jdbcType=TIMESTAMP},
+      spouse_name = #{spouseName,jdbcType=VARCHAR},
+      spouse_gender = #{spouseGender,jdbcType=CHAR},
+      spouse_document_type = #{spouseDocumentType,jdbcType=CHAR},
+      spouse_id_number = #{spouseIdNumber,jdbcType=VARCHAR},
+      spouse_mobile_phone = #{spouseMobilePhone,jdbcType=VARCHAR},
+      spouse_unit_code = #{spouseUnitCode,jdbcType=VARCHAR},
+      last_year_net_profit = #{lastYearNetProfit,jdbcType=DECIMAL},
+      last_year_total_assets = #{lastYearTotalAssets,jdbcType=DECIMAL},
+      last_year_net_worth = #{lastYearNetWorth,jdbcType=DECIMAL},
+      last_year_total_liabilities = #{lastYearTotalLiabilities,jdbcType=DECIMAL},
+      enterprise_monthly_debt = #{enterpriseMonthlyDebt,jdbcType=DECIMAL},
+      recent_total_liabilities = #{recentTotalLiabilities,jdbcType=DECIMAL},
+      recent_bank_loan_balance = #{recentBankLoanBalance,jdbcType=DECIMAL},
+      recent_total_assets = #{recentTotalAssets,jdbcType=DECIMAL},
+      recent_guarantee_assets = #{recentGuaranteeAssets,jdbcType=DECIMAL},
+      recent_economic_litigation_costs = #{recentEconomicLitigationCosts,jdbcType=DECIMAL},
+      recent_not_bank_loan_balance = #{recentNotBankLoanBalance,jdbcType=DECIMAL},
+      current_year_total_profits = #{currentYearTotalProfits,jdbcType=DECIMAL},
+      current_year_total_income = #{currentYearTotalIncome,jdbcType=DECIMAL},
+      enterprise_overview1 = #{enterpriseOverview1,jdbcType=VARCHAR},
+      enterprise_overview2 = #{enterpriseOverview2,jdbcType=VARCHAR},
+      customer_size = #{customerSize,jdbcType=VARCHAR},
+      small_business_logo = #{smallBusinessLogo,jdbcType=VARCHAR},
+      group_clients_logo = #{groupClientsLogo,jdbcType=VARCHAR},
+      customer_manager = #{customerManager,jdbcType=VARCHAR},
+      input_user = #{inputUser,jdbcType=VARCHAR}
+    where project_id = #{projectId,jdbcType=VARCHAR}
+  </update>
+</mapper>
